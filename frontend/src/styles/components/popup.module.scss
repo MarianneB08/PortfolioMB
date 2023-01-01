@@ -1,0 +1,25 @@
+@use "../globals.module.scss" as globals;
+
+.popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: fit-content;
+    background-color: globals.$color-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .popupContent {
+        position: relative;
+        padding: 32px;
+        width: 100%;
+        background-color: globals.$color-5;
+        &.closeButton {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+}
