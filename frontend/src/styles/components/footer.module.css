@@ -236,6 +236,9 @@ li {
 .footerContainer .footerText {
   text-align: center;
 }
+.footerContainer .footerText .footerLink {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 480px) {
   .footerContainer {

@@ -10,6 +10,9 @@
     align-items: center;
     .footerText {
         text-align: center;
+        .footerLink {
+            cursor: pointer;
+        }
     }
 }
 

@@ -8,12 +8,9 @@ const [buttonPopup, setButtonPopup] = useState(false);
     <footer className={footerStyles.footerContainer}>
       <div className={footerStyles.footerText}>
         <p>© Marianne Boyer - 2023</p>
-        <p onClick={() => setButtonPopup(true)}>Mentions légales</p>
+        <p onClick={() => setButtonPopup(true)} className={footerStyles.footerLink}>Mentions légales</p>
       </div>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h3>My popup</h3>
-        <p>This is my button triggered popup</p>
-      </Popup>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}/>
     </footer>
   );
 };
