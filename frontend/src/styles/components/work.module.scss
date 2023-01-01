@@ -1,0 +1,19 @@
+@use "../globals.module.scss" as globals;
+
+.workContainer {
+  padding-bottom: 70px;
+  color: globals.$color-1;
+  .workTitle {
+    font-family: globals.$font-family-2;
+    font-size: globals.$font-size-4;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    letter-spacing: 3px;
+  }
+  .workAnimate {
+    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+      both;
+    animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  }
+}

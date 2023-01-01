@@ -1,0 +1,93 @@
+@use "../globals.module.scss" as globals;
+
+// KEYFRAMES
+
+@keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  55% {
+    opacity: 0.7;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+// **************** //
+
+.contactContainer {
+  background-color: globals.$color-1;
+  color: globals.$color-5;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .contactTitle {
+    font-family: globals.$font-family-2;
+    font-size: globals.$font-size-4;
+    padding-bottom: 50px;
+    letter-spacing: 3px;
+  }
+  .contactAnimate {
+    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+      both;
+    animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  }
+  .socialMediaContainer {
+    display: flex;
+    justify-content: center;
+    .linkedinLogoAnimate {
+      animation: slide-in-left 3s ease 0s 1 normal forwards;
+    }
+    .githubLogoAnimate {
+      animation: slide-in-right 3s ease 0s 1 normal forwards;
+    }
+  }
+  .emailAndSecretContainer {
+    .emailContainer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      font-size: globals.$font-size-3;
+      border: 2px solid;
+      width: 500px;
+      padding: 20px 30px;
+      .emailText {
+        color: globals.$color-5;
+      }
+      .emailIcon {
+        margin: 5px 25px 0 0;
+      }
+    }
+    .secretContainer {
+      display: flex;
+      justify-content: center;
+      font-size: globals.$font-size-3;
+      .secretText {
+        animation: scrollingDown;
+        animation-duration: 2s;
+        color: globals.$color-5;
+        margin-top: 40px;
+      }
+    }
+  }
+}

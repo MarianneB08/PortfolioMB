@@ -1,0 +1,144 @@
+@use "../globals.module.scss" as globals;
+
+// Keyframes
+
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+
+// Mixins
+
+@mixin homeText {
+  font-family: globals.$font-family-1;
+  font-size: globals.$font-size-3;
+  color: globals.$color-3;
+  font-weight: 400;
+  width: 300px;
+  max-width: 350px;
+  @include globals.textAlignment;
+}
+
+// Classic
+
+.homeContainer {
+  background-color: globals.$color-1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+  .homeWrapper {
+    width: 80%;
+    padding: 35px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .textContainerLeft {
+      @include homeText;
+      animation: 4s ease-out forwards homeDoorTextLeft;
+    }
+    .img {
+      height: 250px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -5px;
+      margin: 0 20px;
+      filter: blur(6px);
+    }
+    .animateImg {
+      animation: 3s ease-out forwards homeDoorImg;
+    }
+    .textContainerRight {
+      @include homeText;
+      animation: 4s ease-out forwards homeDoorTextRight;
+    }
+  }
+}
+
+/* ---------- DESKTOP, LARGE SCREENS (min-width: 1025px / max-width: 1200px) ---------- */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .homeContainer {
+    .homeWrapper {
+      width: 80%;
+    }
+  }
+}
+
+/* ---------- SMALL SCREENS, LAPTOPS (min-width: 769px / max-width: 1024px) ---------- */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .homeContainer {
+    .homeWrapper {
+      width: 100%;
+      margin: 0 40px;
+      .img {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 369px) and (max-width: 890px) {
+  .homeContainer {
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 50px;
+    .homeWrapper {
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      margin: 0 auto;
+      .textContainerLeft {
+        animation: none;
+      }
+      .img {
+        margin: 50px 0;
+      }
+      .textContainerRight {
+        animation: none;
+      }
+    }
+  }
+}
+
+/* ---------- MOBILE (max-width: 480px) ---------- */
+
+@media screen and (max-width: 480px) {
+  .homeContainer {
+    height: auto;
+
+    .homeWrapper {
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      .textContainerLeft {
+        font-size: globals.$font-size-1;
+        animation: none;
+      }
+      .img {
+        height: 200px;
+        margin: 50px 0;
+      }
+      .textContainerRight {
+        font-size: globals.$font-size-1;
+        animation: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+@use "../globals.module.scss" as globals;
+
+.cardContainer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: globals.$color-1;
+  .card {
+    height: 270px;
+    width: 41%;
+    max-width: 500px;
+    margin: 30px;
+    position: relative;
+    box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
+    .cardImg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      object-position: top center;
+      top: 0;
+      left: 0;
+    }
+    .infos {
+      opacity: 0;
+      height: 270px;
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 25px;
+      .title {
+        font-size: globals.$font-size-1;
+      }
+      .date {
+        font-size: globals.$font-size-xs;
+        margin: 10px 0;
+      }
+      .details {
+        @include globals.textAlignment;
+        font-size: globals.$font-size-xs;
+      }
+      .buttonsContainer {
+        display: flex;
+        justify-content: space-around;
+        margin: 15px 0;
+        .buttonContainer {
+          width: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          border: 1.5px solid globals.$color-5;
+          transition: transform 300ms;
+          font-size: globals.$font-size-xs;
+          &:hover {
+            transform: scale(1.1);
+          }
+          .button {
+            color: globals.$color-5;
+          }
+        }
+        .hiddenButton {
+          display: none;
+        }
+      }
+      &:hover {
+        background-color: globals.$color-1;
+        color: globals.$color-5;
+        opacity: 0.8;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+// Small screens, laptops (769px - 1024px) & Desktop, large screens (1025px - 1200px)
+
+@media screen and (max-width: 1200px) {
+  .cardContainer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    .card {
+      height: 300px;
+      width: 90%;
+      max-width: none;
+      margin: 30px;
+      position: relative;
+      box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
+      .infos {
+        opacity: 0;
+        height: 300px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 25px;
+        .title {
+          font-size: globals.$font-size-2;
+        }
+        .date {
+          font-size: globals.$font-size-1;
+          margin: 0;
+        }
+        .details {
+          font-size: globals.$font-size-1;
+        }
+        .buttonsContainer {
+          .buttonContainer {
+            width: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35px;
+            border: 1.5px solid globals.$color-5;
+            transition: transform 300ms;
+            font-size: globals.$font-size-1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// iPads, Tablets (481px - 768px)
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    .card {
+      .infos {
+        padding: 20px;
+        .title {
+          font-size: globals.$font-size-1;
+        }
+        .date {
+          font-size: globals.$font-size-xs;
+          margin: 0;
+        }
+        .details {
+          font-size: globals.$font-size-xs;
+        }
+        .buttonsContainer {
+          .buttonContainer {
+            font-size: globals.$font-size-xs;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile devices (320px - 480px)
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .cardContainer {
+    .card {
+      .infos {
+        padding: 15px;
+        .title {
+          font-size: globals.$font-size-1;
+          margin-bottom: 5px;
+        }
+        .date {
+          font-size: globals.$font-size-xs;
+          margin: 5px 0 10px 0;
+        }
+        .details {
+          font-size: globals.$font-size-xs;
+          margin-bottom: 10px;
+        }
+        .buttonsContainer {
+          justify-content: space-between;
+          margin: 5px;
+          .buttonContainer {
+            font-size: globals.$font-size-xs;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .cardContainer {
+    .card {
+      .infos {
+        .title {
+          font-size: globals.$font-size-xs;
+          margin-bottom: 5px;
+        }
+        .date {
+          font-size: globals.$font-size-xs;
+          margin-bottom: 5px;
+        }
+        .details {
+          font-size: globals.$font-size-xs;
+          margin-bottom: 5px;
+        }
+        .buttonsContainer {
+          margin: 0;
+          justify-content: center;
+          .buttonContainer {
+            margin: 0 15px 0 15px;
+            font-size: globals.$font-size-xs;
+          }
+        }
+      }
+    }
+  }
+}

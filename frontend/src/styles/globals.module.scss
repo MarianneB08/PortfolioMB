@@ -1,0 +1,186 @@
+// VARIABLES
+
+// Pickled Bluewood
+$color-1: #273248;
+// Apple Blossom
+$color-2: #af4f41;
+// Crusta
+$color-3: #fc7643;
+// Atomic Tangerine
+$color-4: #ffa364;
+// Karry
+$color-5: #ffebd2;
+
+$font-family-1: "Dosis", sans-serif;
+$font-family-2: "Permanent Marker", sans-serif;
+
+$font-size-xs: 15px;
+$font-size-1: 18px;
+$font-size-2: 22px;
+$font-size-3: 24px;
+$font-size-4: 35px;
+
+// MIXINS
+
+@mixin textAlignment {
+  text-align: justify;
+  word-break: break-word;
+}
+
+// KEYFRAMES
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+    transform: translateX(-300px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(-26px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateX(-13px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateX(-6.5px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateX(-4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes slide-in-right {
+  0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+    transform: translateX(300px);
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        animation-timing-function: ease-in;
+        transform: translateX(26px);
+    }
+
+    65% {
+        animation-timing-function: ease-in;
+        transform: translateX(13px);
+    }
+
+    82% {
+        animation-timing-function: ease-in;
+        transform: translateX(6.5px);
+    }
+
+    93% {
+        animation-timing-function: ease-in;
+        transform: translateX(4px);
+    }
+
+    25%,
+    55%,
+    75%,
+    87%,
+    98% {
+        animation-timing-function: ease-out;
+        transform: translateX(0px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+// STYLES GLOBAUX APPLIQUÉS À L'ENSEMBLE DU SITE
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+  font-family: $font-family-1;
+  font-size: $font-size-1;
+  background-color: $color-5;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-1;
+}
+
+li {
+  list-style-type: none;
+}
