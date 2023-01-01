@@ -32,13 +32,15 @@
 }
 
 @keyframes apparition {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 // **************** //
@@ -51,6 +53,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
+  overflow-x: hidden;
   .contactTitle {
     font-family: globals.$font-family-2;
     font-size: globals.$font-size-4;
@@ -75,7 +79,7 @@
   .curriculumContainer {
     opacity: 0;
     font-size: globals.$font-size-4;
-    animation: apparition 3s ease 1s 1 normal forwards; 
+    animation: apparition 1.5s ease 0.5s 1 normal forwards;
     .curriculumLink {
       color: globals.$color-5;
     }
@@ -87,7 +91,7 @@
       margin-top: 50px;
       font-size: globals.$font-size-3;
       border: 2px solid;
-      width: 500px;
+      max-width: 500px;
       padding: 20px 30px;
       .emailText {
         color: globals.$color-5;
@@ -105,6 +109,48 @@
         animation-duration: 2s;
         color: globals.$color-5;
         margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer {
+    .curriculumContainer {
+      font-size: globals.$font-size-2;
+    }
+    .emailAndSecretContainer {
+      width: 350px;
+      .emailContainer {
+        .emailText {
+          font-size: globals.$font-size-1;
+        }
+        .emailIcon {
+          font-size: globals.$font-size-1;
+        }
+      }
+      .secretContainer {
+        .secretText {
+          font-size: globals.$font-size-xs;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactContainer {
+    .contactTitle {
+      font-size: globals.$font-size-3;
+    }
+    .emailAndSecretContainer {
+      width: 270px;
+      .emailText {
+        font-size: globals.$font-size-xs;
+      }
+      .emailIcon {
+        font-size: globals.$font-size-xs;
+        margin: 5px 10px 0 0;
       }
     }
   }

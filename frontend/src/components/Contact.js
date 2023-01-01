@@ -22,6 +22,7 @@ const Contact = () => {
 
   const { ref: contactRef, inView: contactIsVisible } = useInView(options);
   const { ref: logosRef, inView: logosIsVisible } = useInView(options);
+  const { ref: cvRef, inView: cvIsVisible } = useInView(options);
 
   return (
     <section className={contactStyles.contactContainer} id="contact">
@@ -61,8 +62,16 @@ const Contact = () => {
         </div>
       </div>
 
-      <div download={CV} className={contactStyles.curriculumContainer}>
-        <a href={CV} download="CV_MarianneBoyer_DeveloppeuseFrontend" className={contactStyles.curriculumLink}>
+      <div
+        download={CV}
+        className={`${cvIsVisible ? contactStyles.curriculumContainer : ""}`}
+        ref={cvRef}
+      >
+        <a
+          href={CV}
+          download="CV_MarianneBoyer_DeveloppeuseFrontend"
+          className={contactStyles.curriculumLink}
+        >
           <p>CV</p>
           <FontAwesomeIcon icon={faDownload} />
         </a>
@@ -78,7 +87,7 @@ const Contact = () => {
             className={contactStyles.emailText}
             href="mailto:mboyer.correction.relecture@gmail.com"
           >
-            mboyer.correction.relecture@gmail.com
+            <div className={contactStyles.desktopText}>mboyer.devweb@gmail.com</div>
           </a>
         </div>
         <div className={contactStyles.secretContainer}>

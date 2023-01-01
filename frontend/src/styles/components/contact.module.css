@@ -275,17 +275,21 @@ li {
 }
 @-webkit-keyframes apparition {
   0% {
+    transform: translateY(-40px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
 @keyframes apparition {
   0% {
+    transform: translateY(-40px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -297,6 +301,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 .contactContainer .contactTitle {
   font-family: "Permanent Marker", sans-serif;
@@ -323,8 +328,8 @@ li {
 .contactContainer .curriculumContainer {
   opacity: 0;
   font-size: 35px;
-  -webkit-animation: apparition 3s ease 1s 1 normal forwards;
-          animation: apparition 3s ease 1s 1 normal forwards;
+  -webkit-animation: apparition 1.5s ease 0.5s 1 normal forwards;
+          animation: apparition 1.5s ease 0.5s 1 normal forwards;
 }
 .contactContainer .curriculumContainer .curriculumLink {
   color: #ffebd2;
@@ -335,7 +340,7 @@ li {
   margin-top: 50px;
   font-size: 24px;
   border: 2px solid;
-  width: 500px;
+  max-width: 500px;
   padding: 20px 30px;
 }
 .contactContainer .emailAndSecretContainer .emailContainer .emailText {
@@ -356,4 +361,37 @@ li {
           animation-duration: 2s;
   color: #ffebd2;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactContainer .curriculumContainer {
+    font-size: 22px;
+  }
+  .contactContainer .emailAndSecretContainer {
+    width: 350px;
+  }
+  .contactContainer .emailAndSecretContainer .emailContainer .emailText {
+    font-size: 18px;
+  }
+  .contactContainer .emailAndSecretContainer .emailContainer .emailIcon {
+    font-size: 18px;
+  }
+  .contactContainer .emailAndSecretContainer .secretContainer .secretText {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contactContainer .contactTitle {
+    font-size: 24px;
+  }
+  .contactContainer .emailAndSecretContainer {
+    width: 270px;
+  }
+  .contactContainer .emailAndSecretContainer .emailText {
+    font-size: 15px;
+  }
+  .contactContainer .emailAndSecretContainer .emailIcon {
+    font-size: 15px;
+    margin: 5px 10px 0 0;
+  }
 }/*# sourceMappingURL=contact.module.css.map */
