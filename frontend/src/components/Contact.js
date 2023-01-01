@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import contactStyles from "../styles/components/contact.module.scss";
 import Skill from "./Skill";
 import logoLinkedin from "../assets/logo_Linkedin.svg";
 import logoGitHub from "../assets/logo_GitHub.svg";
+import CV from "../assets/CV.pdf";
 
 const Contact = () => {
   const [text, setText] = useState(false);
@@ -31,6 +33,7 @@ const Contact = () => {
       >
         Contact
       </h2>
+
       <div className={contactStyles.socialMediaContainer} ref={logosRef}>
         <div
           className={`${
@@ -57,6 +60,14 @@ const Contact = () => {
           </a>
         </div>
       </div>
+
+      <div download={CV} className={contactStyles.curriculumContainer}>
+        <a href={CV} download="CV_MarianneBoyer_DeveloppeuseFrontend" className={contactStyles.curriculumLink}>
+          <p>CV</p>
+          <FontAwesomeIcon icon={faDownload} />
+        </a>
+      </div>
+
       <div className={contactStyles.emailAndSecretContainer} onClick={display}>
         <div className={contactStyles.emailContainer}>
           <FontAwesomeIcon
@@ -78,7 +89,6 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <div className={contactStyles.curriculumContainer}>Télécharger mon CV</div>
     </section>
   );
 };

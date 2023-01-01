@@ -31,6 +31,16 @@
   }
 }
 
+@keyframes apparition {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 // **************** //
 
 .contactContainer {
@@ -60,6 +70,14 @@
     }
     .githubLogoAnimate {
       animation: slide-in-right 3s ease 0s 1 normal forwards;
+    }
+  }
+  .curriculumContainer {
+    opacity: 0;
+    font-size: globals.$font-size-4;
+    animation: apparition 3s ease 1s 1 normal forwards; 
+    .curriculumLink {
+      color: globals.$color-5;
     }
   }
   .emailAndSecretContainer {

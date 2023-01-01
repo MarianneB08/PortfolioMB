@@ -273,6 +273,22 @@ li {
     z-index: 1;
   }
 }
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .contactContainer {
   background-color: #273248;
   color: #ffebd2;
@@ -303,6 +319,15 @@ li {
 .contactContainer .socialMediaContainer .githubLogoAnimate {
   -webkit-animation: slide-in-right 3s ease 0s 1 normal forwards;
           animation: slide-in-right 3s ease 0s 1 normal forwards;
+}
+.contactContainer .curriculumContainer {
+  opacity: 0;
+  font-size: 35px;
+  -webkit-animation: apparition 3s ease 1s 1 normal forwards;
+          animation: apparition 3s ease 1s 1 normal forwards;
+}
+.contactContainer .curriculumContainer .curriculumLink {
+  color: #ffebd2;
 }
 .contactContainer .emailAndSecretContainer .emailContainer {
   display: flex;
