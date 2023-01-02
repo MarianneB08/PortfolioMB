@@ -57,7 +57,7 @@
     "id": "7",
     "title": "Portfolio",
     "date": "Décembre 2022",
-    "infos": "Il s'agit tout simplement du site sur lequel vous vous trouvez actuellement ! Il a été développé avec React, et surtout avec passion. En espérant que votre parcours sur mon portfolio vous aura été agréable 😊",
+    "infos": "Il s'agit du site sur lequel vous vous trouvez actuellement ! Il a été développé avec React, Sass pour les styles, et surtout avec passion. En espérant que votre parcours sur mon portfolio vous aura été agréable 😊",
     "img": "./img/portfolio.png",
     "site": "",
     "code": "https://github.com/MarianneB08/Portfolio"

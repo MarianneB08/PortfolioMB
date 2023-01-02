@@ -291,7 +291,7 @@ li {
 .homeContainer .homeWrapper .img {
   height: 250px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -5px;
-  margin: 0 20px;
+  margin: 40px 20px 0 20px;
   filter: blur(6px);
 }
 .homeContainer .homeWrapper .animateImg {
@@ -324,7 +324,7 @@ li {
     margin: 0 40px;
   }
   .homeContainer .homeWrapper .img {
-    margin: 0 10px;
+    margin: 50px 10px 0 10px;
   }
 }
 @media screen and (min-width: 369px) and (max-width: 890px) {

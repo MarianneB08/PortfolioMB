@@ -16,12 +16,9 @@ const Home = () => {
     <section className={homeStyles.homeContainer} id="home">
       <div className={homeStyles.homeWrapper}>
         <div className={homeStyles.textContainerLeft}>
-          <p>Hello world !</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            veritatis totam quia officiis ullam quasi eum rem. Soluta neque
-            consequatur tenetur accusantium perspiciatis, ut eligendi aspernatur
-            magnam ducimus laudantium rerum!
+            Après 8 années consacrées à la correction-relecture, d'abord dans l'édition généraliste puis au service d'un site de soutien scolaire, 
+            j'ai fini par répondre à l'appel du web en me lançant dans une formation de développement web. Internet étant désormais un lieu de vie incontournable pour la chose écrite, cette évolution était logique et nécessaire.
           </p>
         </div>
         <img
@@ -32,12 +29,8 @@ const Home = () => {
           ${imgIsVisible ? homeStyles.animateImg : ''}`}
         />
         <div className={homeStyles.textContainerRight}>
-          <p>Hello world !</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            veritatis totam quia officiis ullam quasi eum rem. Soluta neque
-            consequatur tenetur accusantium perspiciatis, ut eligendi aspernatur
-            magnam ducimus laudantium rerum!
+            Si le développement est devenu en 2022 mon nouveau métier, mes compétences en correction restent d'actualité et je suis heureuse de pouvoir continuer à les mettre en œuvre chaque jour depuis que je développe des lignes de code. Ces deux métiers s'enrichissent mutuellement, et j'ai hâte de vous montrer le résultat de cette alchimie !
           </p>
         </div>
       </div>
