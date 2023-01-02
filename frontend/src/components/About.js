@@ -19,7 +19,44 @@ const About = () => {
       >
         À propos
       </h2>
-      <p className={aboutStyles.aboutText}>
+
+      <div className={aboutStyles.boxTimeline}>
+
+        <div className={aboutStyles.ligne}></div>
+
+        <div className={`${aboutStyles.rond} ${aboutStyles.r2}`}></div>
+        <div className={`${aboutStyles.rond} ${aboutStyles.r1}`}></div>
+        <div className={`${aboutStyles.rond} ${aboutStyles.r3}`}></div>
+        <div className={`${aboutStyles.rond} ${aboutStyles.r4}`}></div>
+
+
+        <div className={`${aboutStyles.box} ${aboutStyles.b1}`}>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
+            </p>
+        </div>
+        <div className={`${aboutStyles.box} ${aboutStyles.b2}`}>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
+            </p>
+        </div>
+        <div className={`${aboutStyles.box} ${aboutStyles.b3}`}>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
+            </p>
+        </div>
+        <div className={`${aboutStyles.box} ${aboutStyles.b4}`}>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nisi maxime doloremque tempora exercitationem, minima eos impedit odit quia culpa voluptatum harum unde repellat commodi?
+            </p>
+        </div>
+
+    </div>
+      {/* <p className={aboutStyles.aboutText}>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit iste ut
         debitis laboriosam dignissimos quidem, at ab et. Itaque veritatis
         architecto nostrum animi soluta modi et voluptate, necessitatibus
@@ -38,7 +75,7 @@ const About = () => {
         provident veritatis ducimus deserunt suscipit non iure adipisci fugit
         ipsam, cupiditate nulla optio odio ullam vel ut eligendi repellendus
         repudiandae a! Eveniet, exercitationem.
-      </p>
+      </p> */}
     </section>
   );
 };

@@ -17,8 +17,8 @@ const Home = () => {
       <div className={homeStyles.homeWrapper}>
         <div className={homeStyles.textContainerLeft}>
           <p>
-            Après 8 années consacrées à la correction-relecture, d'abord dans l'édition généraliste puis au service d'un site de soutien scolaire, 
-            j'ai fini par répondre à l'appel du web en me lançant dans une formation de développement web. Internet étant désormais un lieu de vie incontournable pour la chose écrite, cette évolution était logique et nécessaire.
+            Après 8 années consacrées à la correction-relecture, d'abord dans l'édition généraliste puis pour un site de soutien scolaire, 
+            j'ai fini par répondre à l'appel du web en me lançant dans une formation de développement web en 2022. Internet étant désormais un lieu de vie incontournable pour la chose écrite, cette évolution était logique et nécessaire.
           </p>
         </div>
         <img

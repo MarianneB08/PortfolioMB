@@ -228,7 +228,7 @@ li {
   background-color: #af4f41;
   color: #ffebd2;
   width: 100%;
-  height: 600px;
+  height: 1500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,40 +237,97 @@ li {
   font-family: "Permanent Marker", sans-serif;
   font-size: 35px;
   text-align: center;
-  margin-bottom: 70px;
   letter-spacing: 3px;
 }
 .aboutContainer .aboutAnimate {
   -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
-.aboutContainer .aboutText {
+.aboutContainer .boxTimeline {
+  display: flex;
+  width: 100%;
+  height: 1300px;
+  position: relative;
+  padding: 80px 0 250px 0;
+  /* 1000 - 160 + 80 / 3 =~ 306 */
+}
+.aboutContainer .boxTimeline .ligne {
+  height: 1000px;
+  width: 7px;
+  margin: 0 auto;
+  background: #ffebd2;
+}
+.aboutContainer .boxTimeline .rond {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffebd2;
+  position: absolute;
+  border: 1px solid #ffebd2;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutContainer .boxTimeline .r1 {
+  top: 80px;
+}
+.aboutContainer .boxTimeline .r2 {
+  top: 386px;
+}
+.aboutContainer .boxTimeline .r3 {
+  top: 692px;
+}
+.aboutContainer .boxTimeline .r4 {
+  top: 1050px;
+}
+.aboutContainer .boxTimeline .box {
+  display: flex;
+  flex-direction: column;
+  color: #af4f41;
+  width: 400px;
+  min-height: 200px;
+  padding: 20px;
+  background: #ffebd2;
+  box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.aboutContainer .boxTimeline .b1 {
+  top: 80px;
+  left: calc(50% - 270px);
+}
+.aboutContainer .boxTimeline .b2 {
+  top: 386px;
+  left: calc(50% + 270px);
+}
+.aboutContainer .boxTimeline .b3 {
+  top: 692px;
+  left: calc(50% - 270px);
+}
+.aboutContainer .boxTimeline .b4 {
+  top: 1050px;
+  left: calc(50% + 270px);
+}
+.aboutContainer .boxTimeline .box p {
+  line-height: 20px;
+  font-size: 18px;
+  margin: 10px 0 20px 0;
   text-align: justify;
   word-break: break-word;
-  font-size: 22px;
-  padding-bottom: 20px;
-  margin: 0 auto;
-  width: 85%;
-  line-height: 1.8rem;
 }
 
-@media screen and (max-width: 890px) {
-  .aboutContainer {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+@media screen and (max-width: 1000px) {
+  .aboutContainer .boxTimeline .ligne {
+    position: relative;
+    left: 200px;
   }
-  .aboutContainer .aboutTitle {
-    margin: 60px 0;
-    font-size: 24px;
+  .aboutContainer .boxTimeline .rond {
+    left: calc(50% + 200px);
   }
-  .aboutContainer .aboutText {
-    font-size: 22px;
-    margin-bottom: 40px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .aboutContainer .aboutText {
-    font-size: 18px;
+  .aboutContainer .boxTimeline .box {
+    left: calc(50% - 50px);
   }
 }/*# sourceMappingURL=about.module.css.map */
