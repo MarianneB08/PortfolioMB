@@ -25,7 +25,7 @@ const Navbar = () => {
           className={navbarStyles.navbarItem}
           activeClass={navbarStyles.active}
           spy={true}
-          offset={-95}
+          offset={-75}
           to="about"
         >
           <FontAwesomeIcon
@@ -38,7 +38,7 @@ const Navbar = () => {
           className={navbarStyles.navbarItem}
           activeClass={navbarStyles.active}
           spy={true}
-          offset={-125}
+          offset={-80}
           to="skills"
         >
           <FontAwesomeIcon
@@ -51,7 +51,7 @@ const Navbar = () => {
           className={navbarStyles.navbarItem}
           activeClass={navbarStyles.active}
           spy={true}
-          offset={-120}
+          offset={-80}
           to="work"
         >
           <FontAwesomeIcon
@@ -64,7 +64,7 @@ const Navbar = () => {
           className={navbarStyles.navbarItem}
           activeClass={navbarStyles.active}
           spy={true}
-          offset={-150}
+          offset={-70}
           to="contact"
         >
           <FontAwesomeIcon
