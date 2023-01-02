@@ -129,7 +129,7 @@
 
 // iPads, Tablets (481px - 768px)
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .cardContainer {
     .card {
       .infos {
@@ -145,6 +145,8 @@
           font-size: globals.$font-size-xs;
         }
         .buttonsContainer {
+          width: 70%;
+          margin: 0 auto;
           .buttonContainer {
             font-size: globals.$font-size-xs;
           }
@@ -174,7 +176,6 @@
           margin-bottom: 10px;
         }
         .buttonsContainer {
-          justify-content: space-between;
           margin: 5px;
           .buttonContainer {
             font-size: globals.$font-size-xs;
@@ -207,6 +208,35 @@
           .buttonContainer {
             margin: 0 15px 0 15px;
             font-size: globals.$font-size-xs;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cardContainer {
+    .card {
+      .infos {
+        .title {
+          font-size: globals.$font-size-xs;
+          margin-bottom: 5px;
+        }
+        .date {
+          font-size: globals.$font-size-xxs;
+          margin-bottom: 5px;
+        }
+        .details {
+          font-size: globals.$font-size-xxs;
+          margin-bottom: 5px;
+        }
+        .buttonsContainer {
+          margin-top: 10px;
+          justify-content: center;
+          .buttonContainer {
+            margin: 0 15px 0 15px;
+            font-size: globals.$font-size-xxs;
           }
         }
       }

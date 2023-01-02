@@ -351,7 +351,7 @@ li {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .cardContainer .card .infos {
     padding: 20px;
   }
@@ -364,6 +364,10 @@ li {
   }
   .cardContainer .card .infos .details {
     font-size: 15px;
+  }
+  .cardContainer .card .infos .buttonsContainer {
+    width: 70%;
+    margin: 0 auto;
   }
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
     font-size: 15px;
@@ -386,7 +390,6 @@ li {
     margin-bottom: 10px;
   }
   .cardContainer .card .infos .buttonsContainer {
-    justify-content: space-between;
     margin: 5px;
   }
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
@@ -413,5 +416,27 @@ li {
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
     margin: 0 15px 0 15px;
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cardContainer .card .infos .title {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .cardContainer .card .infos .date {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .cardContainer .card .infos .details {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .cardContainer .card .infos .buttonsContainer {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .cardContainer .card .infos .buttonsContainer .buttonContainer {
+    margin: 0 15px 0 15px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=card.module.css.map */

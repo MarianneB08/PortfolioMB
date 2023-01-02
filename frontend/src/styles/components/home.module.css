@@ -381,4 +381,9 @@ li {
     -webkit-animation: none;
             animation: none;
   }
+}
+@media screen and (max-width: 330px) {
+  .homeContainer .homeWrapper .textContainerLeft, .homeContainer .homeWrapper .textContainerRight {
+    width: 250px;
+  }
 }/*# sourceMappingURL=home.module.css.map */
