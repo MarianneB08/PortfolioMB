@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
-import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { faRoad } from "@fortawesome/free-solid-svg-icons";
 import { faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
 import { faClipboardCheck } from "@fortawesome/free-solid-svg-icons";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -26,13 +26,13 @@ const Navbar = () => {
           activeClass={navbarStyles.active}
           spy={true}
           offset={-75}
-          to="about"
+          to="training"
         >
           <FontAwesomeIcon
-            icon={faCircleUser}
+            icon={faRoad}
             className={navbarStyles.navbarIcon}
           />
-          <p className={navbarStyles.navbarText}>À propos</p>
+          <p className={navbarStyles.navbarText}>Parcours</p>
         </NavLink>
         <NavLink
           className={navbarStyles.navbarItem}
