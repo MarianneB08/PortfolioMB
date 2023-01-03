@@ -237,6 +237,9 @@
   .trainingContainer {
     height: 2330px;
     margin: 0 auto;
+    .trainingTitle {
+      font-size: globals.$font-size-3;
+    }
     .boxTimeline {
       height: 2150px;
       .ligne {
