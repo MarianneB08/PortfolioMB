@@ -11,12 +11,18 @@ const Training = () => {
   };
 
   const { ref: trainingRef, inView: trainingIsVisible } = useInView(options);
+  const { ref: boxOneRef, inView: boxOneIsVisible } = useInView(options);
+  const { ref: boxTwoRef, inView: boxTwoIsVisible } = useInView(options);
+  const { ref: boxThreeRef, inView: boxThreeIsVisible } = useInView(options);
+  const { ref: boxFourRef, inView: boxFourIsVisible } = useInView(options);
+  const { ref: boxFiveRef, inView: boxFiveIsVisible } = useInView(options);
+  const { ref: boxSixRef, inView: boxSixIsVisible } = useInView(options);
 
   return (
-    <section className={trainingStyles.aboutContainer} id="training">
+    <section className={trainingStyles.trainingContainer} id="training">
       <h2
-        className={`${trainingStyles.aboutTitle} ${
-          trainingIsVisible ? trainingStyles.aboutAnimate : ""
+        className={`${trainingStyles.trainingTitle} ${
+          trainingIsVisible ? trainingStyles.trainingAnimate : ""
         }`}
         ref={trainingRef}
       >
@@ -38,24 +44,37 @@ const Training = () => {
             className={trainingStyles.timelineIcon}
           />
         </div>
-        <div className={`${trainingStyles.rond} ${trainingStyles.r3}`}><FontAwesomeIcon
+        <div className={`${trainingStyles.rond} ${trainingStyles.r3}`}>
+          <FontAwesomeIcon
             icon={faBriefcase}
             className={trainingStyles.timelineIcon}
-          /></div>
-        <div className={`${trainingStyles.rond} ${trainingStyles.r4}`}><FontAwesomeIcon
+          />
+        </div>
+        <div className={`${trainingStyles.rond} ${trainingStyles.r4}`}>
+          <FontAwesomeIcon
             icon={faGraduationCap}
             className={trainingStyles.timelineIcon}
-          /></div>
-        <div className={`${trainingStyles.rond} ${trainingStyles.r5}`}><FontAwesomeIcon
+          />
+        </div>
+        <div className={`${trainingStyles.rond} ${trainingStyles.r5}`}>
+          <FontAwesomeIcon
             icon={faGraduationCap}
             className={trainingStyles.timelineIcon}
-          /></div>
-        <div className={`${trainingStyles.rond} ${trainingStyles.r6}`}><FontAwesomeIcon
+          />
+        </div>
+        <div className={`${trainingStyles.rond} ${trainingStyles.r6}`}>
+          <FontAwesomeIcon
             icon={faGraduationCap}
             className={trainingStyles.timelineIcon}
-          /></div>
+          />
+        </div>
 
-        <div className={`${trainingStyles.box} ${trainingStyles.b1}`}>
+        <div
+          ref={boxOneRef}
+          className={`${trainingStyles.box} ${trainingStyles.b1} ${
+            boxOneIsVisible ? trainingStyles.boxAnimate : ""
+          }`}
+        >
           <h2>2022 - OpenClassrooms</h2>
           <p>
             Formation « Développement web », réalisation de 7 projets
@@ -67,43 +86,64 @@ const Training = () => {
             </ul>
           </p>
         </div>
-        <div className={`${trainingStyles.box} ${trainingStyles.b2}`}>
+        <div
+          ref={boxTwoRef}
+          className={`${trainingStyles.box} ${trainingStyles.b2} ${
+            boxTwoIsVisible ? trainingStyles.boxAnimate : ""
+          }`}
+        >
           <h2>2016-2022 — Kartable</h2>
           <p>
             Responsable de la correction - pôle éditorial
             <ul>
-              <li>Relecture et correction ortho-typographique de l’ensemble des contenus pédagogiques</li>
+              <li>
+                Relecture et correction ortho-typographique de l’ensemble des
+                contenus pédagogiques
+              </li>
               <li>Vérification des e-mailings</li>
               <li>Optimisation du wording du site web</li>
-              <li>Correction des ouvrages print publiés en collaboration avec les éditions parascolaires Ellipses</li>
+              <li>
+                Correction des ouvrages print publiés aux éditions Ellipses
+              </li>
             </ul>
           </p>
         </div>
-        <div className={`${trainingStyles.box} ${trainingStyles.b3}`}>
+        <div ref={boxThreeRef} className={`${trainingStyles.box} ${trainingStyles.b3} ${
+            boxThreeIsVisible ? trainingStyles.boxAnimate : ""
+          }`}>
           <h2>2014-2016 - Éditions J'ai lu (Flammarion)</h2>
           <p>
-            Réécriture et correction de romans érotiques traduits de l'anglo-saxon
+            Réécriture et correction de romans érotiques traduits de
+            l'anglo-saxon
           </p>
         </div>
-        <div className={`${trainingStyles.box} ${trainingStyles.b4}`}>
+        <div ref={boxFourRef} className={`${trainingStyles.box} ${trainingStyles.b4} ${
+            boxFourIsVisible ? trainingStyles.boxAnimate : ""
+          }`}>
           <h2>2012-2013 - Paris-Sorbonne Paris-IV</h2>
           <p>
-            Master 2 mention « Littérature, philologie et linguistique », spécialité Langue française 
+            Master 2 mention « Littérature, philologie et linguistique »,
+            spécialité Langue française
             <ul>
-              <li>Mémoire de recherche : « Analyse psycholinguistique de l'activité de copie »</li>
+              <li>
+                Mémoire de recherche : « Analyse psycholinguistique de
+                l'activité de copie »
+              </li>
             </ul>
           </p>
         </div>
-        <div className={`${trainingStyles.box} ${trainingStyles.b5}`}>
+        <div ref={boxFiveRef} className={`${trainingStyles.box} ${trainingStyles.b5} ${
+            boxFiveIsVisible ? trainingStyles.boxAnimate : ""
+          }`}>
           <h2>2011-2012 - Centre d'Écriture et de Communication (CEC)</h2>
-          <p>
-            Formation au métier de correcteur
-          </p>
+          <p>Formation au métier de correcteur</p>
         </div>
-        <div className={`${trainingStyles.box} ${trainingStyles.b6}`}>
+        <div ref={boxSixRef} className={`${trainingStyles.box} ${trainingStyles.b6} ${
+            boxSixIsVisible ? trainingStyles.boxAnimate : ""
+          }`}>
           <h2>2010-2011 - Paris-Sorbonne Paris-IV</h2>
           <p>
-            Master 1 de Lettres modernes appliquées, option Édition 
+            Master 1 de Lettres modernes appliquées, option Édition
             <ul>
               <li>Mémoire de recherche : « Sémiologie de la ponctuation »</li>
             </ul>
