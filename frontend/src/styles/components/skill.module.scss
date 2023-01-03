@@ -22,3 +22,9 @@
     margin: 20px 20px;
   }
 }
+
+@media screen and (max-width: 319px) {
+  .img {
+    height: 50px;
+  }
+}

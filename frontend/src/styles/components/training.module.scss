@@ -37,6 +37,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
+  overflow-x: hidden;
   .trainingTitle {
     font-family: globals.$font-family-2;
     font-size: globals.$font-size-4;
@@ -146,7 +148,6 @@
     }
 
     .box p {
-      //line-height: 20px;
       font-size: globals.$font-size-1;
       margin: 10px 0 10px 0;
       @include globals.textAlignment;
@@ -271,6 +272,87 @@
       .box {
         left: calc(50% + 50px);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .trainingContainer {
+    height: 2220px;
+    margin: 0 auto;
+    .trainingTitle {
+      font-size: globals.$font-size-3;
+    }
+    .boxTimeline {
+      height: 1900px;
+      .ligne {
+        display: none;
+      }
+      .box {
+        margin-left: 20px;
+        width: 240px;
+        height: auto;
+        & h2 {
+          font-size: globals.$font-size-1;
+        }
+        & p {
+          font-size: globals.$font-size-xs;
+        }
+      }
+
+      .rond {
+        left: calc(50% + 110px);
+        z-index: 1;
+        border: 2px solid globals.$color-2;
+      }
+      .r1 {
+        top: 60px;
+      }
+      .r2 {
+        top: 400px;
+      }
+      .r3 {
+        top: 800px;
+      }
+      .r4 {
+        top: 1080px;
+      }
+      .r5 {
+        top: 1440px;
+      }
+      .r6 {
+        top: 1730px;
+      }
+      .box {
+        left: calc(50% + 50px);
+      }
+      .b1 {
+        top: 80px;
+      }
+      .b2 {
+        top: 420px;
+      }
+      .b3 {
+        top: 820px;
+      }
+      .b4 {
+        top: 1100px;
+      }
+      .b5 {
+        top: 1460px;
+      }
+      .b6 {
+        top: 1750px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .trainingContainer {
+    height: 2130px;
+    .boxTimeline {
+      height: 1980px;
     }
   }
 }
