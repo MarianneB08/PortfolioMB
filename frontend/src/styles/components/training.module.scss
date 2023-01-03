@@ -126,6 +126,7 @@
     .b2 {
       top: 386px;
       left: calc(50% + 270px);
+      //left: calc(50% - 180px);
     }
     .b3 {
       top: 692px;
@@ -158,7 +159,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .aboutContainer {
+  .trainingContainer {
     .boxTimeline {
       .ligne {
         position: relative;
@@ -169,6 +170,103 @@
       }
       .box {
         left: calc(50% - 50px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .trainingContainer {
+    height: 2350px;
+    .boxTimeline {
+      height: 2150px;
+      .ligne {
+        height: 1800px;
+        position: relative;
+        left: 200px;
+      }
+      .rond {
+        left: calc(50% + 200px);
+      }
+      .r1 {
+        top: 80px;
+      }
+      .r2 {
+        top: 450px;
+      }
+      .r3 {
+        top: 890px;
+      }
+      .r4 {
+        top: 1170px;
+      }
+      .r5 {
+        top: 1560px;
+      }
+      .r6 {
+        top: 1870px;
+      }
+      .box {
+        width: 300px;
+        left: calc(50% + 30px);
+      }
+      .b1 {
+        top: 80px;
+      }
+      .b2 {
+        top: 450px;
+      }
+      .b3 {
+        top: 890px;
+      }
+      .b4 {
+        top: 1170px;
+      }
+      .b5 {
+        top: 1560px;
+      }
+      .b6 {
+        top: 1870px;
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .trainingContainer {
+    height: 2330px;
+    margin: 0 auto;
+    .boxTimeline {
+      height: 2150px;
+      .ligne {
+        display: none;
+      }
+      .rond {
+        left: calc(50% + 150px);
+        z-index: 1;
+        border: 2px solid globals.$color-2;
+      }
+      .r1 {
+        top: 65px;
+      }
+      .r2 {
+        top: 435px;
+      }
+      .r3 {
+        top: 870px;
+      }
+      .r4 {
+        top: 1150px;
+      }
+      .r5 {
+        top: 1540px;
+      }
+      .r6 {
+        top: 1850px;
+      }
+      .box {
+        left: calc(50% + 50px);
       }
     }
   }
