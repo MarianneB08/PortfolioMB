@@ -75,10 +75,10 @@ const Training = () => {
             boxOneIsVisible ? trainingStyles.boxAnimate : ""
           }`}
         >
-          <h2>2022 - OpenClassrooms</h2>
+          <h2>2022&nbsp;- OpenClassrooms</h2>
           <p>
-            Formation « Développement web », réalisation de 7 projets
-            professionnalisants sur la base des techniques suivantes :
+            Formation «&nbsp;Développement web&nbsp;», réalisation de 7&nbsp;projets
+            professionnalisants sur la base des techniques suivantes&nbsp;:
             <ul>
               <li>HTML, CSS (Sass), JavaScript</li>
               <li>React.js</li>
@@ -92,9 +92,9 @@ const Training = () => {
             boxTwoIsVisible ? trainingStyles.boxAnimate : ""
           }`}
         >
-          <h2>2016-2022 — Kartable</h2>
+          <h2>2016-2022&nbsp;— Kartable</h2>
           <p>
-            Responsable de la correction - pôle éditorial
+            Responsable de la correction&nbsp;- pôle éditorial
             <ul>
               <li>
                 Relecture et correction ortho-typographique de l’ensemble des
@@ -111,7 +111,7 @@ const Training = () => {
         <div ref={boxThreeRef} className={`${trainingStyles.box} ${trainingStyles.b3} ${
             boxThreeIsVisible ? trainingStyles.boxAnimate : ""
           }`}>
-          <h2>2014-2016 - Éditions J'ai lu (Flammarion)</h2>
+          <h2>2014-2016&nbsp;- Éditions J'ai&nbsp;lu (Flammarion)</h2>
           <p>
             Réécriture et correction de romans érotiques traduits de
             l'anglo-saxon
@@ -120,14 +120,14 @@ const Training = () => {
         <div ref={boxFourRef} className={`${trainingStyles.box} ${trainingStyles.b4} ${
             boxFourIsVisible ? trainingStyles.boxAnimate : ""
           }`}>
-          <h2>2012-2013 - Paris-Sorbonne Paris-IV</h2>
+          <h2>2012-2013&nbsp;- Paris-Sorbonne Paris-IV</h2>
           <p>
-            Master 2 mention « Littérature, philologie et linguistique »,
+            Master 2 mention «&nbsp;Littérature, philologie et linguistique&nbsp;»,
             spécialité Langue française
             <ul>
               <li>
-                Mémoire de recherche : « Analyse psycholinguistique de
-                l'activité de copie »
+                Mémoire de recherche&nbsp;: «&nbsp;Analyse psycholinguistique de
+                l'activité de copie&nbsp;»
               </li>
             </ul>
           </p>
@@ -135,17 +135,17 @@ const Training = () => {
         <div ref={boxFiveRef} className={`${trainingStyles.box} ${trainingStyles.b5} ${
             boxFiveIsVisible ? trainingStyles.boxAnimate : ""
           }`}>
-          <h2>2011-2012 - Centre d'Écriture et de Communication (CEC)</h2>
+          <h2>2011-2012&nbsp;- Centre d'Écriture et de Communication (CEC)</h2>
           <p>Formation au métier de correcteur</p>
         </div>
         <div ref={boxSixRef} className={`${trainingStyles.box} ${trainingStyles.b6} ${
             boxSixIsVisible ? trainingStyles.boxAnimate : ""
           }`}>
-          <h2>2010-2011 - Paris-Sorbonne Paris-IV</h2>
+          <h2>2010-2011&nbsp;- Paris-Sorbonne Paris-IV</h2>
           <p>
             Master 1 de Lettres modernes appliquées, option Édition
             <ul>
-              <li>Mémoire de recherche : « Sémiologie de la ponctuation »</li>
+              <li>Mémoire de recherche&nbsp;: «&nbsp;Sémiologie de la ponctuation&nbsp;»</li>
             </ul>
           </p>
         </div>

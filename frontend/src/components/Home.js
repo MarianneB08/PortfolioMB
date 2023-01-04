@@ -30,7 +30,7 @@ const Home = () => {
         />
         <div className={homeStyles.textContainerRight}>
           <p>
-            Si le développement est devenu en 2022 mon nouveau métier, mes compétences en correction restent d'actualité et je suis heureuse de pouvoir continuer à les mettre en œuvre chaque jour depuis que je développe des lignes de code. Ces deux métiers s'enrichissent mutuellement, et j'ai hâte de vous montrer le résultat de cette alchimie !
+            Si le développement est devenu en&nbsp;2022 mon nouveau métier, mes compétences en correction restent d'actualité et je suis heureuse de pouvoir continuer à les mettre en œuvre chaque jour depuis que je développe des lignes de code. Ces deux métiers s'enrichissent mutuellement, et j'ai hâte de vous montrer le résultat de cette alchimie&nbsp;!
           </p>
         </div>
       </div>
