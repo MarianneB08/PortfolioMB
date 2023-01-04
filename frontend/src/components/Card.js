@@ -8,8 +8,13 @@ const Card = () => {
       {DataFile.map((project) => (
         <div className={cardStyles.card}>
           <img
-            className={cardStyles.cardImg}
-            src={project.img}
+            className={cardStyles.cardImgDesktop}
+            src={project.img.desktop}
+            alt={project.title}
+          />
+          <img
+            className={cardStyles.cardImgMobile}
+            src={project.img.mobile}
             alt={project.title}
           />
 

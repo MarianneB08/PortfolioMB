@@ -3,6 +3,8 @@
 .workContainer {
   padding-bottom: 70px;
   color: globals.$color-1;
+  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
+  overflow-x: hidden;
   .workTitle {
     font-family: globals.$font-family-2;
     font-size: globals.$font-size-4;

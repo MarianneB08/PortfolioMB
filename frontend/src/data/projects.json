@@ -4,7 +4,10 @@
     "title": "Booki - Projet 2 de la formation Développement Web d'OpenClassrooms",
     "date": "Juin 2022",
     "infos": "L'enjeu de ce projet était d'intégrer la page web de Booki, une plateforme de réservation de vacances, avec HTML et CSS, et tout en veillant à proposer un design responsive.",
-    "img": "./img/booki.png",
+    "img": {
+      "desktop": "./img/booki.png",
+      "mobile": "./img/booki_mobile.png"
+    },
     "site": "https://marianneb08.github.io/OC_Projet2/",
     "code": "https://github.com/MarianneB08/OC_Projet2"
   },
@@ -13,7 +16,10 @@
     "title": "Ohmyfood - Projet 3 de la formation Développement Web d'OpenClassrooms",
     "date": "Juillet 2022",
     "infos": "Le site de foodtech Ohmyfood avait besoin d'une plateforme développée selon une approche mobile-first. Il fallait donc  transformer une maquette en site web responsive avec HTML, CSS et le préprocesseur Sass, tout en ajoutant des animations graphiques. Il fallait également proposer une loading page de notre choix.",
-    "img": "./img/ohmyfood.png",
+    "img": {
+      "desktop": "./img/ohmyfood.png",
+      "mobile": "./img/ohmyfood_mobile.png"
+    },
     "site": "https://marianneb08.github.io/OC_Projet3/",
     "code": "https://github.com/MarianneB08/OC_Projet3"
   },
@@ -22,7 +28,10 @@
     "title": "Agence La Panthère - Projet 4 de la formation Développement Web d'OpenClassrooms",
     "date": "Août 2022",
     "infos": "Le but de ce projet était d'optimiser le site existant de l'agence de web design La Panthère du point de vue du SEO et de l'accessibilité. La version de base du projet est disponible sur mon profil GitHub, la version améliorée est accessible à partir des boutons ci-dessous.",
-    "img": "./img/lapanthere.png",
+    "img": {
+      "desktop": "./img/lapanthere.png",
+      "mobile": "./img/lapanthere_mobile.png"
+    },
     "site": "https://marianneb08.github.io/OC_Projet4_version_amelioree/",
     "code": "https://github.com/MarianneB08/OC_Projet4_version_amelioree"
   },
@@ -31,7 +40,10 @@
     "title": "Kanap - Projet 5 de la formation Développement Web d'OpenClassrooms",
     "date": "Septembre 2022",
     "infos": "La marque de canapés Kanap souhaitait développer un site e-commerce. L'intégration devait être réalisée de manière dynamique en JavaScript pur. Une API était mise à notre disposition pour récupérer les produits et leur détails. Il fallait aussi gérer l'ajout des produits au panier, valider des données issues de sources externes. Un plan de test d'acceptation était attendu.",
-    "img": "./img/kanap.png",
+    "img": {
+      "desktop": "./img/kanap.png",
+      "mobile": "./img/kanap_mobile.png"
+    },
     "site": "",
     "code": "https://github.com/MarianneB08/OC_Projet5"
   },
@@ -40,7 +52,10 @@
     "title": "Piiquante - Projet 6 de la formation Développement Web d'OpenClassrooms",
     "date": "Octobre 2022",
     "infos": "Pour ce projet, il fallait créer le backend et l'API d'une application d'avis gastronomiques de sauces piquantes avec Node.js, Express et MongoDB pour construire la base de données NoSQL. Le développement devait mettre en œuvre es opérations CRUD de manière sécurisée et respecter les normes de l'OWASP pour la sécurisation des données.",
-    "img": "./img/piiquante.png",
+    "img": {
+      "desktop": "./img/piiquante.png",
+      "mobile": "./img/piiquante_mobile.png"
+    },
     "site": "",
     "code": "https://github.com/MarianneB08/OC_Projet6"
   },
@@ -49,7 +64,10 @@
     "title": "Kasa - Projet 7 de la formation Développement Web d'OpenClassrooms",
     "date": "Novembre 2022",
     "infos": "Kasa, plateforme de location d’appartements entre particuliers, souhaitait refondre son front-end avec React. Il fallait donc initialiser l'application avec Create React App, développer des éléments de l’interface du site grâce à des composants React, et configurer la navigation entre les pages de l’application avec React Router.",
-    "img": "./img/kasa.png",
+    "img": {
+      "desktop": "./img/kasa.png",
+      "mobile": "./img/kasa_mobile.png"
+    },
     "site": "https://ocp7-kasa.netlify.app/",
     "code": "https://github.com/MarianneB08/OC_Projet7"
   },
@@ -58,7 +76,10 @@
     "title": "Portfolio",
     "date": "Décembre 2022",
     "infos": "Il s'agit du site sur lequel vous vous trouvez actuellement ! Il a été développé avec React, Sass pour les styles, et surtout avec passion. En espérant que votre parcours sur mon portfolio vous aura été agréable 😊",
-    "img": "./img/portfolio.png",
+    "img": {
+      "desktop": "./img/portfolio.png",
+      "mobile": "./img/portfolio_mobile.png"
+    },
     "site": "",
     "code": "https://github.com/MarianneB08/Portfolio"
   }

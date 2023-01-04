@@ -14,7 +14,7 @@
     margin: 30px;
     position: relative;
     box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
-    .cardImg {
+    .cardImgDesktop {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -22,6 +22,9 @@
       object-position: top center;
       top: 0;
       left: 0;
+    }
+    .cardImgMobile {
+      display: none;
     }
     .infos {
       opacity: 0;
@@ -82,13 +85,11 @@
 @media screen and (max-width: 1200px) {
   .cardContainer {
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
     .card {
       height: 300px;
-      width: 90%;
-      max-width: none;
-      margin: 30px;
+      width: 70%;
+      margin: 40px;
       position: relative;
       box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
       .infos {
@@ -127,11 +128,12 @@
   }
 }
 
-// iPads, Tablets (481px - 768px)
+// iPads, Tablets (600px - 768px)
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
   .cardContainer {
     .card {
+      width: auto;
       .infos {
         padding: 20px;
         .title {
@@ -156,12 +158,28 @@
   }
 }
 
-// Mobile devices (320px - 480px)
+// Mobile devices (320px - 599px)
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
   .cardContainer {
     .card {
+      margin: 50px 0;
+      height: 380px;
+      .cardImgDesktop {
+        display: none;
+      }
+      .cardImgMobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        object-position: center center;
+        top: 0;
+        left: 0;
+      }
       .infos {
+        height: 100%;
         padding: 15px;
         .title {
           font-size: globals.$font-size-1;
@@ -178,35 +196,7 @@
         .buttonsContainer {
           margin: 5px;
           .buttonContainer {
-            font-size: globals.$font-size-xs;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cardContainer {
-    .card {
-      .infos {
-        .title {
-          font-size: globals.$font-size-xs;
-          margin-bottom: 5px;
-        }
-        .date {
-          font-size: globals.$font-size-xs;
-          margin-bottom: 5px;
-        }
-        .details {
-          font-size: globals.$font-size-xs;
-          margin-bottom: 5px;
-        }
-        .buttonsContainer {
-          margin: 0;
-          justify-content: center;
-          .buttonContainer {
-            margin: 0 15px 0 15px;
+            margin: 0 10px 0 10px;
             font-size: globals.$font-size-xs;
           }
         }
@@ -218,7 +208,24 @@
 @media screen and (max-width: 320px) {
   .cardContainer {
     .card {
+      margin: 50px 0;
+      height: 380px;
+      .cardImgDesktop {
+        display: none;
+      }
+      .cardImgMobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        object-position: center center;
+        top: 0;
+        left: 0;
+      }
       .infos {
+        height: 100%;
+        padding: 15px;
         .title {
           font-size: globals.$font-size-xs;
           margin-bottom: 5px;
@@ -235,7 +242,7 @@
           margin-top: 10px;
           justify-content: center;
           .buttonContainer {
-            margin: 0 15px 0 15px;
+            margin: 0 5px 0 5px;
             font-size: globals.$font-size-xxs;
           }
         }
