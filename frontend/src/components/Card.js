@@ -17,7 +17,6 @@ const Card = () => {
             src={project.img.mobile}
             alt={project.title}
           />
-
           <div className={cardStyles.infos}>
             <h3 className={cardStyles.title}>{project.title}</h3>
             <p className={cardStyles.date}>{project.date}</p>
