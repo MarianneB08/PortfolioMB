@@ -23,7 +23,7 @@ const Home = () => {
         }`}
         ref={homeRef}
       >
-        Marianne Boyer<br/>Portfolio
+        Marianne Boyer<br/>Développeuse web
       </h1>
       <div className={homeStyles.homeWrapper}>
         <div className={homeStyles.textContainerLeft}>
