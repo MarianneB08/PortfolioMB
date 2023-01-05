@@ -64,7 +64,7 @@
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .homeContainer {
     .homeWrapper {
-      width: 80%;
+      width: 90%;
     }
   }
 }
@@ -74,10 +74,9 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .homeContainer {
     .homeWrapper {
-      width: 100%;
-      margin: 0 40px;
+      width: 90%;
       .img {
-        margin: 50px 10px 0 10px;
+        margin: 50px 25px 0 25px;
       }
     }
   }
