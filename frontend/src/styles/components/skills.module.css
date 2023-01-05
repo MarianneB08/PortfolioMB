@@ -338,7 +338,6 @@ li {
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
-  align-items: space-between;
   flex-wrap: wrap;
 }
 .skillsContainer .logosContainer .logosFrontend {
