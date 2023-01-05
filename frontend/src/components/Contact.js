@@ -1,3 +1,8 @@
+// Le composant "Contact" correspond à la section "Contact" du site. Il contient les liens vers le profil Linkedin et le profil GitHub, 
+// un lien de téléchargement du CV, et un bouton contenant l'adresse e-mail qui, au clic, ouvre l'application de rédaction d'e-mails configurée
+// par défaut sur la machine du visiteur.
+// On utilise intersection-observer pour gérer le déclenchement d'animations au scroll.
+
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +15,8 @@ import logoGitHub from "../assets/logo_GitHub.svg";
 import CV from "../assets/CV.pdf";
 
 const Contact = () => {
+  // On utilise le hook useState pour gérer l'affichage conditionnel d'un petit paragraphe au clic sur le bouton contenant
+  // l'adresse e-mail. La fonction "display", lorsqu'elle est appelée, permet de changer ce state.
   const [text, setText] = useState(false);
 
   const display = () => {
@@ -20,6 +27,7 @@ const Contact = () => {
     threshold: 0.1,
   };
 
+  // On définit plusieurs ancrages avec le hook useInView pour déclencher des animations au scroll à différents endroits de la section.
   const { ref: contactRef, inView: contactIsVisible } = useInView(options);
   const { ref: logosRef, inView: logosIsVisible } = useInView(options);
   const { ref: cvRef, inView: cvIsVisible } = useInView(options);

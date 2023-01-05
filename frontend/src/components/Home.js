@@ -10,10 +10,19 @@ const Home = () => {
     threshold: 0.3
   }
 
+  const { ref: homeRef, inView: homeIsVisible } = useInView(options);
   const { ref: imgRef, inView: imgIsVisible } = useInView(options);
 
   return (
     <section className={homeStyles.homeContainer} id="home">
+      <h1
+        className={`${homeStyles.homeTitle} ${
+          homeIsVisible ? homeStyles.titleAnimate : ""
+        }`}
+        ref={homeRef}
+      >
+        Marianne Boyer<br/>Portfolio
+      </h1>
       <div className={homeStyles.homeWrapper}>
         <div className={homeStyles.textContainerLeft}>
           <p>
