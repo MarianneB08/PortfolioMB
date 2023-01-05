@@ -7,7 +7,6 @@
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  //height: auto;
   height: 100vh;
   color: globals.$color-1;
   background-color: globals.$color-4;
@@ -48,15 +47,20 @@
 // Desktop, Tablets //
 
 @media screen and (max-width: 1000px) {
-  .logosFrontend, .logosBackend {
-    justify-content: center;
+  .skillsContainer {
+    height: auto;
+    .logosFrontend, .logosBackend {
+      justify-content: center;
+    }
   }
+  
 }
 
 // Mobiles //
 
 @media screen and (max-width: 480px) {
   .skillsContainer {
+    height: auto;
     .skillsTitle {
       @include globals.sectionTitleMobile;
     }
