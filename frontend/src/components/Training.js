@@ -85,8 +85,7 @@ const Training = () => {
         >
           <h2>2022&nbsp;- OpenClassrooms</h2>
           <p>
-            Formation «&nbsp;Développement web&nbsp;», réalisation de 7&nbsp;projets
-            professionnalisants sur la base des techniques suivantes&nbsp;:
+            Formation «&nbsp;Développement web&nbsp;», réalisation de 7&nbsp;projets sur la base des techniques suivantes&nbsp;:
             <ul>
               <li>HTML, CSS (Sass), JavaScript</li>
               <li>React.js</li>
