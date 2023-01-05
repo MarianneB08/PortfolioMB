@@ -1,15 +1,17 @@
+// Le composant "Home" correspond à la section "Marianne Boyer - Portfolio" du site.
+// On utilise intersection-observer pour gérer le déclenchement d'animations au scroll.
+
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import homeStyles from "../styles/components/home.module.scss";
 import photo from "../assets/photo.jpg";
-
-// Ajouter un h1 dans cette section
 
 const Home = () => {
   const options = {
     threshold: 0.3
   }
 
+  // On définit plusieurs ancrages avec le hook useInView pour déclencher des animations au scroll à différents endroits de la section.
   const { ref: homeRef, inView: homeIsVisible } = useInView(options);
   const { ref: imgRef, inView: imgIsVisible } = useInView(options);
 

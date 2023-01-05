@@ -1,3 +1,7 @@
+// Le composant "Training" correspond à la section "Parcours" du site. Il contient l'ensemble des formations 
+// et des expériences professionnelles.
+// On utilise intersection-observer pour gérer le déclenchement d'animations au scroll.
+
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import trainingStyles from "../styles/components/training.module.scss";
@@ -10,6 +14,7 @@ const Training = () => {
     threshold: 0.1,
   };
 
+  // On définit plusieurs ancrages avec le hook useInView pour déclencher des animations au scroll à différents endroits de la section.
   const { ref: trainingRef, inView: trainingIsVisible } = useInView(options);
   const { ref: boxOneRef, inView: boxOneIsVisible } = useInView(options);
   const { ref: boxTwoRef, inView: boxTwoIsVisible } = useInView(options);
@@ -28,10 +33,12 @@ const Training = () => {
       >
         Parcours
       </h2>
-
+      
       <div className={trainingStyles.boxTimeline}>
+        {/* Mise en place de la ligne centrale de la timeline */}
         <div className={trainingStyles.ligne}></div>
 
+        {/* Mise en place des icônes formation/expérience professionnelle */}
         <div className={`${trainingStyles.rond} ${trainingStyles.r1}`}>
           <FontAwesomeIcon
             icon={faGraduationCap}
@@ -69,6 +76,7 @@ const Training = () => {
           />
         </div>
 
+        {/* Mise en place des cards qui décrivent chaque formation/expérience professionnelle avec animation au scroll */}
         <div
           ref={boxOneRef}
           className={`${trainingStyles.box} ${trainingStyles.b1} ${

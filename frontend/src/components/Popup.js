@@ -1,3 +1,8 @@
+// Le composant "Popup" correspond à la modale qui s'ouvre au clic sur le lien "Mentions légales" qui se trouve dans le footer du site.
+// L'apparition de ce composant est géré depuis le composant "Footer" avec le hook useState dont les paramètres sont passés en props 
+// au composant "Popup".
+// En bas de cette modale, un bouton "Fermer" gère la dissimulation de la fenêtre en utilisant le setTrigger passé en props.
+
 import React from "react";
 import popupStyles from "../styles/components/popup.module.scss";
 
@@ -108,6 +113,8 @@ const Popup = ({ trigger, setTrigger }) => {
             https://fontawesome.com.
           </p>
         </div>
+        {/* La fermeture de la modale au clic sur le bouton "Fermer" est gérée par le setter du hook useState passé en props au composant "Popup"
+        depuis le composant parent "Footer". */}
         <button
           className={popupStyles.closeButton}
           onClick={() => setTrigger(false)}

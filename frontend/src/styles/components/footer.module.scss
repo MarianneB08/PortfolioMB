@@ -1,13 +1,13 @@
 @use "../globals.module.scss" as globals;
 
+// Desktop //
+
 .footerContainer {
-    height: 120px;
-    background-color: globals.$color-3;
-    font-size: globals.$font-size-2;
-    display: flex;
+    @include globals.flexCenterXY;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 120px;
+    font-size: globals.$font-size-2;
+    background-color: globals.$color-3;   
     .footerText {
         text-align: center;
         .footerLink {
@@ -15,6 +15,8 @@
         }
     }
 }
+
+// Mobile //
 
 @media screen and (max-width: 480px) {
     .footerContainer {

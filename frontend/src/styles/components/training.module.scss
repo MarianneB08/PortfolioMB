@@ -1,48 +1,20 @@
 @use "../globals.module.scss" as globals;
 
-// KEYFRAMES
-
- @-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px) translateX(-200px);
-            transform: translateY(100px) translateX(-200px);
-  }
-  100% {
-    -webkit-transform: translateY(0px) translateX(-200px);
-            transform: translateY(0px) translateX(-200px);
-  }
-}
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px) translateX(-200px);
-            transform: translateY(100px) translateX(-200px);
-            opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0px) translateX(-200px);
-            transform: translateY(0px) translateX(-200px);
-            opacity: 1;
-  }
-}
-
-
-
-// ******************* //
+// Desktop //
 
 .trainingContainer {
-  background-color: globals.$color-2;
-  color: globals.$color-5;
-  width: 100%;
-  height: 2100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
-  overflow-x: hidden;
+  width: 100%;
+  height: 2100px;
+  color: globals.$color-5;
+  background-color: globals.$color-2;
+  overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .trainingTitle {
+    text-align: center;
     font-family: globals.$font-family-2;
     font-size: globals.$font-size-4;
-    text-align: center;
     letter-spacing: 3px;
   }
   .trainingAnimate {
@@ -51,35 +23,32 @@
     animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
   .boxTimeline {
+    position: relative;
     display: flex;
     width: 100%;
     height: 1870px;
-    position: relative;
     padding: 80px 0 250px 0;
     .ligne {
-      height: 1600px;
       width: 7px;
+      height: 1600px;  
       margin: 0 auto;
       background: globals.$color-5;
     }
     .rond {
+      @include globals.flexCenterXY;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background: globals.$color-5;
-      position: absolute;
       border: 1px solid globals.$color-5;
-      left: 50%;
-      transform: translate(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       .timelineIcon {
-        color: globals.$color-2;
         font-size: globals.$font-size-3;
+        color: globals.$color-2;
       }
     }
-    /* 1000 - 160 + 80 / 3 =~ 306 */
     .r1 {
       top: 80px;
     }
@@ -99,18 +68,18 @@
       top: 1662px;
     }
     .box {
-      display: flex;
-      flex-direction: column;
-      color: globals.$color-2;
-      width: 400px;
-      min-height: 150px;
-      padding: 20px;
-      height: auto;
-      background: globals.$color-5;
-      box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
       position: absolute;
       left: 50%;
       transform: translate(-50%);
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+      height: auto;
+      min-height: 150px;
+      padding: 20px;
+      color: globals.$color-2;
+      background-color: globals.$color-5;
+      box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
       opacity: 0;
       h2 {
         font-size: globals.$font-size-3;
@@ -128,7 +97,6 @@
     .b2 {
       top: 386px;
       left: calc(50% + 270px);
-      //left: calc(50% - 180px);
     }
     .b3 {
       top: 692px;
@@ -148,9 +116,9 @@
     }
 
     .box p {
-      font-size: globals.$font-size-1;
-      margin: 10px 0 10px 0;
       @include globals.textAlignment;
+      margin: 10px 0 10px 0;
+      font-size: globals.$font-size-1;
     }
     .box p ul li {
       margin-left: 15px;
@@ -158,6 +126,8 @@
     }
   }
 }
+
+// Desktop (small screens)
 
 @media screen and (max-width: 1000px) {
   .trainingContainer {
@@ -176,15 +146,17 @@
   }
 }
 
+// Tablets
+
 @media screen and (max-width: 550px) {
   .trainingContainer {
     height: 2350px;
     .boxTimeline {
       height: 2150px;
       .ligne {
-        height: 1800px;
         position: relative;
         left: 200px;
+        height: 1800px;
       }
       .rond {
         left: calc(50% + 200px);
@@ -208,8 +180,8 @@
         top: 1870px;
       }
       .box {
-        width: 300px;
         left: calc(50% + 30px);
+        width: 300px;
       }
       .b1 {
         top: 80px;
@@ -229,10 +201,11 @@
       .b6 {
         top: 1870px;
       }
-      
     }
   }
 }
+
+// Mobiles
 
 @media screen and (max-width: 480px) {
   .trainingContainer {
@@ -248,8 +221,8 @@
       }
       .rond {
         left: calc(50% + 150px);
-        z-index: 1;
         border: 2px solid globals.$color-2;
+        z-index: 1;
       }
       .r1 {
         top: 65px;
@@ -276,7 +249,7 @@
   }
 }
 
-@media screen and (max-width: 380px) and (min-width: 300px) {
+@media screen and (min-width: 280px) and (max-width: 380px) {
   .trainingContainer {
     height: 2200px;
     margin: 0 auto;
@@ -289,9 +262,9 @@
         display: none;
       }
       .box {
-        margin-left: 20px;
         width: 240px;
         height: auto;
+        margin-left: 20px;
         & h2 {
           font-size: globals.$font-size-1;
         }
@@ -302,8 +275,8 @@
 
       .rond {
         left: calc(50% + 110px);
-        z-index: 1;
         border: 2px solid globals.$color-2;
+        z-index: 1;
       }
       .r1 {
         top: 60px;
@@ -344,15 +317,6 @@
       .b6 {
         top: 1750px;
       }
-    }
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .trainingContainer {
-    height: 2130px;
-    .boxTimeline {
-      height: 1980px;
     }
   }
 }

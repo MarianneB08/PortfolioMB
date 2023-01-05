@@ -1,65 +1,17 @@
 @use "../globals.module.scss" as globals;
 
-// KEYFRAMES
-
-@keyframes scrollingDown {
-  0% {
-    transform: translateY(-30px);
-    opacity: 0;
-    z-index: 0;
-  }
-  30% {
-    opacity: 0.2;
-  }
-
-  40% {
-    opacity: 0.3;
-  }
-
-  55% {
-    opacity: 0.7;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-    z-index: 1;
-  }
-}
-
-@keyframes apparition {
-  0% {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-// **************** //
+// Desktop //
 
 .contactContainer {
+  @include globals.flexCenterXY;
+  flex-direction: column;
+  height: 700px;
   background-color: globals.$color-1;
   color: globals.$color-5;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
-  overflow-x: hidden;
+  overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .contactTitle {
-    font-family: globals.$font-family-2;
-    font-size: globals.$font-size-4;
+    @include globals.sectionTitleDesktop;
     padding-bottom: 70px;
-    letter-spacing: 3px;
   }
   .contactAnimate {
     -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -77,8 +29,8 @@
     }
   }
   .curriculumContainer {
-    opacity: 0;
     font-size: globals.$font-size-4;
+    opacity: 0;
     animation: apparition 1.5s ease 0.5s 1 normal forwards;
     .curriculumLink {
       color: globals.$color-5;
@@ -88,11 +40,11 @@
     .emailContainer {
       display: flex;
       justify-content: space-around;
+      max-width: 500px;
       margin-top: 50px;
+      padding: 20px 30px;
       font-size: globals.$font-size-3;
       border: 2px solid;
-      max-width: 500px;
-      padding: 20px 30px;
       .emailText {
         color: globals.$color-5;
       }
@@ -105,16 +57,17 @@
       justify-content: center;
       font-size: globals.$font-size-3;
       .secretText {
-        animation: scrollingDown;
-        animation-duration: 2s;
-        color: globals.$color-5;
         margin-top: 40px;
+        animation: scrollingDown 2s ease-in-out;
+        color: globals.$color-5;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
+// Tablets //
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
   .contactContainer {
     .curriculumContainer {
       font-size: globals.$font-size-2;
@@ -122,12 +75,7 @@
     .emailAndSecretContainer {
       width: 350px;
       .emailContainer {
-        .emailText {
-          font-size: globals.$font-size-1;
-        }
-        .emailIcon {
-          font-size: globals.$font-size-1;
-        }
+        font-size: globals.$font-size-1;
       }
       .secretContainer {
         .secretText {
@@ -138,18 +86,19 @@
   }
 }
 
+// Mobiles //
+
 @media screen and (max-width: 480px) {
   .contactContainer {
     .contactTitle {
-      font-size: globals.$font-size-3;
+      @include globals.sectionTitleMobile;
     }
     .emailAndSecretContainer {
       width: 270px;
-      .emailText {
+      .emailContainer {
         font-size: globals.$font-size-xs;
       }
       .emailIcon {
-        font-size: globals.$font-size-xs;
         margin: 5px 10px 0 0;
       }
     }

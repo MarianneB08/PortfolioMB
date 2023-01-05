@@ -1,3 +1,7 @@
+// Le composant "Navbar" correspond à la barre de navigation du site.
+// Le scroll au clic sur chaque lien de la navbar est géré avec le package react-scroll. 
+// Sur les formats mobiles, les termes de la navbar sont remplacés par des icônes.
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";

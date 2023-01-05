@@ -1,24 +1,26 @@
 @use "../globals.module.scss" as globals;
 
+// Desktop //
+
 .headerContainer {
-  background-color: globals.$color-3;
-  font-size: globals.$font-size-2;
-  color: globals.$color-1;
-  height: 16vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  letter-spacing: 2px;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 2;
+  height: 16vh;
+  font-size: globals.$font-size-2;
+  letter-spacing: 2px;
+  color: globals.$color-1;
+  background-color: globals.$color-3;
   box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
+  z-index: 2;
   .navbarContainer {
-    width: 100%;
     display: flex;
     justify-content: space-around;
+    width: 100%;
     .navbarItem {
       display: flex;
       .navbarIcon {
@@ -32,17 +34,16 @@
   }
 }
 
-/* ---------- MOBILE (max-width: 890px) ---------- */
+// Tablets, Mobiles //
 
 @media screen and (max-width: 890px) {
   .headerContainer {
-    position: fixed;
-    left: 0;
-    top: 0;
     height: 80px;
     letter-spacing: normal;
   }
 }
+
+// Mobiles //
 
 @media screen and (max-width: 480px) {
   .headerContainer {
@@ -60,11 +61,3 @@
     }
   }
 }
-
-/* ---------- IPAD, TABLETS (min-width: 481px / max-width: 768px) ---------- */
-
-/* ---------- SMALL SCREENS, LAPTOPS (min-width: 769px / max-width: 1024px) ---------- */
-
-/* ---------- DESKTOP, LARGE SCREENS (min-width: 1025px / max-width: 1200px) ---------- */
-
-/* ---------- EXTRA LARGE SCREENS (min-width: 1201px) ---------- */

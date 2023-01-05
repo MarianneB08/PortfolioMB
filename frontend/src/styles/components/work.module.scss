@@ -1,16 +1,17 @@
 @use "../globals.module.scss" as globals;
 
+// Desktop //
+
 .workContainer {
   padding-bottom: 70px;
   color: globals.$color-1;
-  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
-  overflow-x: hidden;
+  overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .workTitle {
-    font-family: globals.$font-family-2;
-    font-size: globals.$font-size-4;
     text-align: center;
     padding-top: 70px;
     padding-bottom: 30px;
+    font-family: globals.$font-family-2;
+    font-size: globals.$font-size-4;
     letter-spacing: 3px;
   }
   .workAnimate {
@@ -19,6 +20,8 @@
     animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
 }
+
+// Mobile //
 
 @media screen and (max-width: 480px) {
   .workContainer {

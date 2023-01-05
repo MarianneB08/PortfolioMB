@@ -1,57 +1,61 @@
 @use "../globals.module.scss" as globals;
 
+// Desktop //
+
 .popupContainer {
-    position: fixed;
-    top: 50%;
+  @include globals.textAlignment;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 280px;
+  padding: 25px;
+  color: globals.$color-1;
+  background-color: globals.$color-5;
+  border: 2px solid globals.$color-1;
+  opacity: 0.9;
+  overflow-y: scroll;
+  .popupTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: globals.$font-size-3;
+  }
+  .popupText {
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+    font-size: globals.$font-size-1;
+  }
+  .closeButton {
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.9;
-    width: 90%;
-    height: 280px;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    padding: 10px 20px;
+    font-family: globals.$font-family-1;
+    font-size: globals.$font-size-1;
+    font-weight: 700;
     background-color: globals.$color-5;
     color: globals.$color-1;
-    @include globals.textAlignment;
-    padding: 25px;
-    overflow-y:auto;
     border: 2px solid globals.$color-1;
-    .popupTitle {
-        font-size: globals.$font-size-3;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .popupText {
-        width: 100%;
-        position: relative;
-        font-size: globals.$font-size-1;
-        margin-bottom: 80px;
-    }
-    .closeButton {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        cursor: pointer;
-        width: 100px;
-        padding: 10px 20px;
-        background-color: globals.$color-5;
-        color: globals.$color-1;
-        border: 2px solid globals.$color-1;
-        font-family: globals.$font-family-1;
-        font-size: globals.$font-size-1;
-        font-weight: 700;
-    }
+    cursor: pointer;
+  }
 }
 
+// Mobiles
+
 @media screen and (max-width: 480px) {
-    .popupContainer {
-        .popupTitle {
-            font-size: globals.$font-size-2;
-        }
-        .popupText {
-            margin-bottom: 60px;
-            font-size: globals.$font-size-xs;
-        }
-        .closeButton {
-            font-size: globals.$font-size-xs;
-        }
+  .popupContainer {
+    .popupTitle {
+      font-size: globals.$font-size-2;
     }
+    .popupText {
+      margin-bottom: 60px;
+      font-size: globals.$font-size-xs;
+    }
+    .closeButton {
+      font-size: globals.$font-size-xs;
+    }
+  }
 }

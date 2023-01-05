@@ -1,5 +1,5 @@
 // Le composant "Footer" correspond au footer du site. Il contient notamment un lien qui, au clic, ouvre les mentions légales du site,
-// dans une modal gérée par le hook useState et contenue dans le composant "Popup".
+// dans une modale gérée par le hook useState et contenue dans le composant "Popup".
 
 import React, {useState} from "react";
 import footerStyles from "../styles/components/footer.module.scss";

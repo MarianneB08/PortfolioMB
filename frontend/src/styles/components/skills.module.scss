@@ -1,121 +1,21 @@
 @use "../globals.module.scss" as globals;
 
-// KEYFRAMES
-
-
-
-@keyframes slide-in-left {
-  0% {
-        animation-timing-function: ease-in;
-        opacity: 1;
-        transform: translateX(-48px);
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    40% {
-        animation-timing-function: ease-in;
-        transform: translateX(-26px);
-    }
-
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateX(-13px);
-    }
-
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateX(-6.5px);
-    }
-
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateX(-4px);
-    }
-
-    25%,
-    55%,
-    75%,
-    87%,
-    98% {
-        animation-timing-function: ease-out;
-        transform: translateX(0px);
-    }
-
-    100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateX(0px);
-    }
-
-}
-
-@keyframes slide-in-right {
-  0% {
-        animation-timing-function: ease-in;
-        opacity: 1;
-        transform: translateX(48px);
-    }
-
-    24% {
-        opacity: 1;
-    }
-
-    40% {
-        animation-timing-function: ease-in;
-        transform: translateX(26px);
-    }
-
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateX(13px);
-    }
-
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateX(6.5px);
-    }
-
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateX(4px);
-    }
-
-    25%,
-    55%,
-    75%,
-    87%,
-    98% {
-        animation-timing-function: ease-out;
-        transform: translateX(0px);
-    }
-
-    100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
-
+// Desktop //
 
 .skillsContainer {
-  width: 100%;
-  height: auto;
-  background-color: globals.$color-4;
-  color: globals.$color-1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  // Fix du bug de la navbar fixed qui disparaît au moment de l'animation sur les skills :
-  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  color: globals.$color-1;
+  background-color: globals.$color-4;
+  overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .skillsTitle {
+    text-align: center;
+    padding: 70px 0 30px 0;
     font-family: globals.$font-family-2;
     font-size: globals.$font-size-4;
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 30px;
     letter-spacing: 3px;
   }
   .skillsAnimate {
@@ -124,18 +24,14 @@
     animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   }
   .logosContainer {
-    height: fit-content;
-    margin: 0 auto;
-    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: space-between;
     flex-wrap: wrap;
-    .logosFrontend {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+    height: fit-content;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    .logosFrontend,
     .logosBackend {
       display: flex;
       flex-direction: row;
@@ -152,18 +48,15 @@
   }
 }
 
+// Desktop, Tablets //
+
 @media screen and (max-width: 1000px) {
-  .skillsContainer {
-    .logosContainer {
-      .logosFrontend {
-        justify-content: center;
-      }
-      .logosBackend {
-        justify-content: center;
-      }
-    }
+  .logosFrontend, .logosBackend {
+    justify-content: center;
   }
 }
+
+// Mobiles //
 
 @media screen and (max-width: 480px) {
   .skillsContainer {

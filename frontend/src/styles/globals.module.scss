@@ -1,4 +1,4 @@
-// VARIABLES
+// VARIABLES //
 
 // Pickled Bluewood
 $color-1: #273248;
@@ -21,14 +21,40 @@ $font-size-2: 22px;
 $font-size-3: 24px;
 $font-size-4: 35px;
 
-// MIXINS
+// MIXINS //
 
+// Titre de section (format Desktop)
+
+@mixin sectionTitleDesktop {
+  font-family: $font-family-2;
+  font-size: $font-size-4;
+  letter-spacing: 3px;
+}
+
+// Titre de section (format Mobile)
+
+@mixin sectionTitleMobile {
+  font-family: $font-family-2;
+  font-size: $font-size-3;
+  letter-spacing: 3px;
+}
+
+// Texte justifié à droite et à gauche
 @mixin textAlignment {
   text-align: justify;
   word-break: break-word;
 }
 
-// KEYFRAMES
+// Flexbox dont le contenu est centré sur X et sur Y
+@mixin flexCenterXY {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// KEYFRAMES //
+
+// Animation sur les titres des sections
 
 @-webkit-keyframes tracking-in-expand {
   0% {
@@ -56,102 +82,200 @@ $font-size-4: 35px;
   }
 }
 
+// Animations sur les paragraphes de la section "Accueil"
+
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+
+// Animation sur la photo de la section "Accueil"
+
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+// Animation sur les cards de la section "Parcours"
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px) translateX(-200px);
+            transform: translateY(100px) translateX(-200px);
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(-200px);
+            transform: translateY(0px) translateX(-200px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(100px) translateX(-200px);
+            transform: translateY(100px) translateX(-200px);
+            opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px) translateX(-200px);
+            transform: translateY(0px) translateX(-200px);
+            opacity: 1;
+  }
+}
+
+// Animation sur les logos frontend de la section "Compétences"
+
 @keyframes slide-in-left {
   0% {
-        animation-timing-function: ease-in;
-        opacity: 1;
+    animation-timing-function: ease-in;
+    opacity: 1;
     transform: translateX(-300px);
-    }
+  }
 
-    24% {
-        opacity: 1;
-    }
+  24% {
+    opacity: 1;
+  }
 
-    40% {
-        animation-timing-function: ease-in;
-        transform: translateX(-26px);
-    }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateX(-26px);
+  }
 
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateX(-13px);
-    }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateX(-13px);
+  }
 
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateX(-6.5px);
-    }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateX(-6.5px);
+  }
 
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateX(-4px);
-    }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateX(-4px);
+  }
 
-    25%,
-    55%,
-    75%,
-    87%,
-    98% {
-        animation-timing-function: ease-out;
-        transform: translateX(0px);
-    }
+  25%,
+  55%,
+  75%,
+  87%,
+  98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0px);
+  }
 
-    100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateX(0px);
-    }
-
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
+
+// Animation sur les logos backend de la section "Compétences"
 
 @keyframes slide-in-right {
   0% {
-        animation-timing-function: ease-in;
-        opacity: 1;
+    animation-timing-function: ease-in;
+    opacity: 1;
     transform: translateX(300px);
-    }
+  }
 
-    24% {
-        opacity: 1;
-    }
+  24% {
+    opacity: 1;
+  }
 
-    40% {
-        animation-timing-function: ease-in;
-        transform: translateX(26px);
-    }
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateX(26px);
+  }
 
-    65% {
-        animation-timing-function: ease-in;
-        transform: translateX(13px);
-    }
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateX(13px);
+  }
 
-    82% {
-        animation-timing-function: ease-in;
-        transform: translateX(6.5px);
-    }
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateX(6.5px);
+  }
 
-    93% {
-        animation-timing-function: ease-in;
-        transform: translateX(4px);
-    }
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateX(4px);
+  }
 
-    25%,
-    55%,
-    75%,
-    87%,
-    98% {
-        animation-timing-function: ease-out;
-        transform: translateX(0px);
-    }
+  25%,
+  55%,
+  75%,
+  87%,
+  98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0px);
+  }
 
-    100% {
-        animation-timing-function: ease-out;
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
-// STYLES GLOBAUX APPLIQUÉS À L'ENSEMBLE DU SITE
+// Animation appliquée au CV
+
+@keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  55% {
+    opacity: 0.7;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+// Animation appliquée à la mention qui apparaît au clic sur le bouton "mboyer.devweb@gmail.com"
+
+@keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+// STYLES GLOBAUX APPLIQUÉS À L'ENSEMBLE DU SITE //
 
 *,
 ::before,
@@ -160,7 +284,6 @@ $font-size-4: 35px;
   margin: 0;
   padding: 0;
 }
-
 
 html {
   width: 100%;

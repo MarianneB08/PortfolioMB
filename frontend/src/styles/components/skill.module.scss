@@ -1,20 +1,21 @@
 @use "../globals.module.scss" as globals;
 
+// Desktop //
+
 .logoContainer {
-  width: 120px;
-  border-radius: 50%;
-  background-color: #ffebd2;
-  display: flex;
+  @include globals.flexCenterXY;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
+  width: 120px;
   margin: 40px 40px;
+  padding: 30px;
+  background-color: #ffebd2;
+  border-radius: 50%;
+  .img {
+    max-width: 50px;
+  }
 }
 
-.img {
-  max-width: 50px;
-}
+// Tablets, mobiles // 
 
 @media screen and (max-width: 500px) {
   .logoContainer {
@@ -22,8 +23,12 @@
   }
 }
 
+// Mobiles //
+
 @media screen and (max-width: 319px) {
-  .img {
-    height: 50px;
+  .logoContainer {
+    .img {
+      height: 50px;
+    }
   }
 }

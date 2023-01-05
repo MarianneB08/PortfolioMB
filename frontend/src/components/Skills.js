@@ -1,3 +1,7 @@
+// Le composant "Skills" correspond à la section "Compétences" du site. Il contient notamment le composant "Skill" qui permet l'affichage
+// des logos de la stack. Ces logos sont passés en props aux composants enfants "Skill".
+// On utilise intersection-observer pour gérer le déclenchement d'animations au scroll.
+
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import logoHTML from "../assets/logo_HTML5.svg";
@@ -18,10 +22,9 @@ const Skills = () => {
     threshold: 0.1,
   };
 
+  // On définit plusieurs ancrages avec le hook useInView pour déclencher des animations au scroll à différents endroits de la section.
   const { ref: skillsRef, inView: skillsIsVisible } = useInView(options);
   const { ref: logosRef, inView: logosIsVisible } = useInView(options);
-
-
 
   return (
     <section className={skillsStyles.skillsContainer} id="skills">
