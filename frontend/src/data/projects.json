@@ -51,7 +51,7 @@
     "id": "5",
     "title": "Piiquante - Projet 6 de la formation Développement Web d'OpenClassrooms",
     "date": "Octobre 2022",
-    "infos": "Pour ce projet, il fallait créer le backend et l'API d'une application d'avis gastronomiques de sauces piquantes avec Node.js, Express et MongoDB pour construire la base de données NoSQL. Le développement devait mettre en œuvre es opérations CRUD de manière sécurisée et respecter les normes de l'OWASP pour la sécurisation des données.",
+    "infos": "Pour ce projet, il fallait créer le backend et l'API d'une application d'avis gastronomiques de sauces piquantes avec Node.js, Express et MongoDB pour construire la base de données NoSQL. Le développement devait mettre en œuvre des opérations CRUD de manière sécurisée et respecter les normes de l'OWASP pour la sécurisation des données.",
     "img": {
       "desktop": "./img/piiquante.png",
       "mobile": "./img/piiquante_mobile.png"
