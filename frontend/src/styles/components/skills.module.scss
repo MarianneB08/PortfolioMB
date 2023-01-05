@@ -12,11 +12,8 @@
   background-color: globals.$color-4;
   overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .skillsTitle {
-    text-align: center;
+    @include globals.sectionTitleDesktop;
     padding: 70px 0 30px 0;
-    font-family: globals.$font-family-2;
-    font-size: globals.$font-size-4;
-    letter-spacing: 3px;
   }
   .skillsAnimate {
     -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -61,7 +58,7 @@
 @media screen and (max-width: 480px) {
   .skillsContainer {
     .skillsTitle {
-      font-size: globals.$font-size-3;
+      @include globals.sectionTitleMobile;
     }
   }
 }

@@ -12,10 +12,7 @@
   background-color: globals.$color-2;
   overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section
   .trainingTitle {
-    text-align: center;
-    font-family: globals.$font-family-2;
-    font-size: globals.$font-size-4;
-    letter-spacing: 3px;
+    @include globals.sectionTitleDesktop;
   }
   .trainingAnimate {
     -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -212,7 +209,7 @@
     height: 2330px;
     margin: 0 auto;
     .trainingTitle {
-      font-size: globals.$font-size-3;
+      @include globals.sectionTitleMobile;
     }
     .boxTimeline {
       height: 2150px;
@@ -254,7 +251,7 @@
     height: 2200px;
     margin: 0 auto;
     .trainingTitle {
-      font-size: globals.$font-size-3;
+      @include globals.sectionTitleMobile;
     }
     .boxTimeline {
       height: 2000px;

@@ -24,12 +24,9 @@
   padding: 120px 0 70px 0;
   background-color: globals.$color-1;
   .homeTitle {
-    text-align: center;
+    @include globals.sectionTitleDesktop;
     margin-top: 40px;
-    font-family: globals.$font-family-2;
-    font-size: globals.$font-size-4;
     color: globals.$color-3;
-    letter-spacing: 3px;
   }
   .titleAnimate {
     -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
@@ -117,8 +114,8 @@
   .homeContainer {
     height: auto;
     .homeTitle {
+      @include globals.sectionTitleMobile;
       margin: 20px 0;
-      font-size: globals.$font-size-3;
     }
     .homeWrapper {
       flex-direction: column;
