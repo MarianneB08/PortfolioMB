@@ -93,7 +93,7 @@ const Contact = () => {
           />
           <a
             className={contactStyles.emailText}
-            href="mailto:mboyer.correction.relecture@gmail.com"
+            href="mailto:mboyer.devweb@gmail.com"
           >
             <div className={contactStyles.desktopText}>mboyer.devweb@gmail.com</div>
           </a>
