@@ -5,7 +5,8 @@
 .contactContainer {
   @include globals.flexCenterXY;
   flex-direction: column;
-  height: 700px;
+  //height: 700px;
+  height: 100vh;
   background-color: globals.$color-1;
   color: globals.$color-5;
   overflow-x: hidden; // Fix du bug de la navbar fixed qui disparaît au moment des animations appliquées à la section

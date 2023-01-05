@@ -17,10 +17,9 @@
 
 .homeContainer {
   position: relative;
-  display: flex;
+  @include globals.flexCenterXY;
   flex-direction: column;
-  align-items: center;
-  height: auto;
+  height: 100vh;
   padding: 120px 0 70px 0;
   background-color: globals.$color-1;
   .homeTitle {
@@ -37,6 +36,7 @@
     display: flex;
     justify-content: space-around;
     width: 80%;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 35px 0;   
     .textContainerLeft {
