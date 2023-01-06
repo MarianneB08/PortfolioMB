@@ -54,7 +54,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Skill src={logoLinkedin} />
+            <Skill src={logoLinkedin} name={"Profil Linkedin"} alt={"logo de Linkedin"}/>
           </a>
         </div>
         <div
@@ -65,7 +65,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Skill src={logoGitHub} />
+            <Skill src={logoGitHub} name={"Profil GitHub"} alt={"logo de Linkedin"}/>
           </a>
         </div>
       </div>
