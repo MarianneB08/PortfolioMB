@@ -22,6 +22,60 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@-webkit-keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@-webkit-keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -190,6 +244,74 @@
     transform: translateX(0px);
   }
 }
+@-webkit-keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@-webkit-keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 *,
 ::before,
 ::after {
@@ -225,50 +347,52 @@ li {
 }
 
 .cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: #273248;
 }
 .cardContainer .card {
-  height: 270px;
+  position: relative;
   width: 41%;
   max-width: 500px;
+  height: 270px;
   margin: 30px;
-  position: relative;
   box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
 }
-.cardContainer .card .cardImg {
+.cardContainer .card .cardImgDesktop {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top center;
      object-position: top center;
-  top: 0;
-  left: 0;
+}
+.cardContainer .card .cardImgMobile {
+  display: none;
 }
 .cardContainer .card .infos {
-  opacity: 0;
-  height: 270px;
-  width: 100%;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 25px;
+  width: 100%;
+  height: 270px;
+  padding: 20px;
+  z-index: 1;
+  opacity: 0;
 }
 .cardContainer .card .infos .title {
   font-size: 18px;
 }
 .cardContainer .card .infos .date {
-  font-size: 15px;
   margin: 10px 0;
+  font-size: 15px;
 }
 .cardContainer .card .infos .details {
   text-align: justify;
@@ -281,14 +405,14 @@ li {
   margin: 15px 0;
 }
 .cardContainer .card .infos .buttonsContainer .buttonContainer {
-  width: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 90px;
   height: 30px;
+  font-size: 15px;
   border: 1.5px solid #ffebd2;
   transition: transform 300ms;
-  font-size: 15px;
 }
 .cardContainer .card .infos .buttonsContainer .buttonContainer:hover {
   transform: scale(1.1);
@@ -309,134 +433,129 @@ li {
 @media screen and (max-width: 1200px) {
   .cardContainer {
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
   }
   .cardContainer .card {
-    height: 300px;
-    width: 90%;
-    max-width: none;
-    margin: 30px;
     position: relative;
+    width: 70%;
+    height: 300px;
+    margin: 40px;
     box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
   }
   .cardContainer .card .infos {
-    opacity: 0;
-    height: 300px;
-    width: 100%;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 25px;
-  }
-  .cardContainer .card .infos .title {
-    font-size: 22px;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    opacity: 0;
   }
   .cardContainer .card .infos .date {
-    font-size: 18px;
     margin: 0;
   }
-  .cardContainer .card .infos .details {
-    font-size: 18px;
-  }
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
-    width: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 110px;
     height: 35px;
-    border: 1.5px solid #ffebd2;
-    transition: transform 300ms;
-    font-size: 18px;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .cardContainer .card {
+    width: auto;
+  }
   .cardContainer .card .infos {
     padding: 20px;
   }
-  .cardContainer .card .infos .title {
-    font-size: 18px;
-  }
   .cardContainer .card .infos .date {
-    font-size: 15px;
     margin: 0;
-  }
-  .cardContainer .card .infos .details {
-    font-size: 15px;
   }
   .cardContainer .card .infos .buttonsContainer {
     width: 70%;
     margin: 0 auto;
   }
-  .cardContainer .card .infos .buttonsContainer .buttonContainer {
-    font-size: 15px;
-  }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .cardContainer .card {
+    height: 380px;
+    margin: 50px 0;
+  }
+  .cardContainer .card .cardImgDesktop {
+    display: none;
+  }
+  .cardContainer .card .cardImgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    -o-object-position: center center;
+       object-position: center center;
+  }
   .cardContainer .card .infos {
+    height: 100%;
     padding: 15px;
   }
   .cardContainer .card .infos .title {
-    font-size: 18px;
     margin-bottom: 5px;
   }
   .cardContainer .card .infos .date {
-    font-size: 15px;
     margin: 5px 0 10px 0;
   }
   .cardContainer .card .infos .details {
-    font-size: 15px;
     margin-bottom: 10px;
   }
   .cardContainer .card .infos .buttonsContainer {
     margin: 5px;
   }
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 400px) {
-  .cardContainer .card .infos .title {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  .cardContainer .card .infos .date {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  .cardContainer .card .infos .details {
-    font-size: 15px;
-    margin-bottom: 5px;
-  }
-  .cardContainer .card .infos .buttonsContainer {
-    margin: 0;
-    justify-content: center;
-  }
-  .cardContainer .card .infos .buttonsContainer .buttonContainer {
-    margin: 0 15px 0 15px;
-    font-size: 15px;
+    margin: 0 10px 0 10px;
   }
 }
 @media screen and (max-width: 320px) {
+  .cardContainer .card {
+    height: 380px;
+    margin: 50px 0;
+  }
+  .cardContainer .card .cardImgDesktop {
+    display: none;
+  }
+  .cardContainer .card .cardImgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+  .cardContainer .card .infos {
+    height: 100%;
+    padding: 15px;
+  }
   .cardContainer .card .infos .title {
     font-size: 15px;
-    margin-bottom: 5px;
   }
   .cardContainer .card .infos .date {
     font-size: 12px;
-    margin-bottom: 5px;
   }
   .cardContainer .card .infos .details {
     font-size: 12px;
-    margin-bottom: 5px;
   }
   .cardContainer .card .infos .buttonsContainer {
-    margin-top: 10px;
     justify-content: center;
+    margin-top: 10px;
   }
   .cardContainer .card .infos .buttonsContainer .buttonContainer {
-    margin: 0 15px 0 15px;
+    margin: 0 5px 0 5px;
     font-size: 12px;
   }
 }/*# sourceMappingURL=card.module.css.map */

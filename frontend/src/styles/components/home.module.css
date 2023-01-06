@@ -22,6 +22,60 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@-webkit-keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@-webkit-keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -190,6 +244,74 @@
     transform: translateX(0px);
   }
 }
+@-webkit-keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@-webkit-keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 *,
 ::before,
 ::after {
@@ -224,74 +346,52 @@ li {
   list-style-type: none;
 }
 
-@-webkit-keyframes homeDoorImg {
-  0% {
-    filter: blur(6px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
-
-@keyframes homeDoorImg {
-  0% {
-    filter: blur(6px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
-@-webkit-keyframes homeDoorTextLeft {
-  100% {
-    transform: perspective(400px) rotateY(15deg);
-  }
-}
-@keyframes homeDoorTextLeft {
-  100% {
-    transform: perspective(400px) rotateY(15deg);
-  }
-}
-@-webkit-keyframes homeDoorTextRight {
-  100% {
-    transform: perspective(400px) rotateY(-15deg);
-  }
-}
-@keyframes homeDoorTextRight {
-  100% {
-    transform: perspective(400px) rotateY(-15deg);
-  }
-}
 .homeContainer {
-  background-color: #273248;
-  height: 100vh;
-  display: flex;
-  align-items: center;
   position: relative;
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 120px 0 70px 0;
+  background-color: #273248;
+}
+.homeContainer .homeTitle {
+  text-align: center;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin-top: 40px;
+  color: #fc7643;
+}
+.homeContainer .titleAnimate {
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 .homeContainer .homeWrapper {
-  width: 80%;
-  padding: 35px 0;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 0;
 }
 .homeContainer .homeWrapper .textContainerLeft {
-  font-family: "Dosis", sans-serif;
-  font-size: 24px;
-  color: #fc7643;
-  font-weight: 400;
-  width: 300px;
-  max-width: 350px;
   text-align: justify;
   word-break: break-word;
+  width: 300px;
+  max-width: 350px;
+  font-family: "Dosis", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fc7643;
   -webkit-animation: 4s ease-out forwards homeDoorTextLeft;
           animation: 4s ease-out forwards homeDoorTextLeft;
 }
 .homeContainer .homeWrapper .img {
   height: 250px;
+  margin: 25px 20px 0 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -5px;
-  margin: 40px 20px 0 20px;
   filter: blur(6px);
 }
 .homeContainer .homeWrapper .animateImg {
@@ -299,40 +399,37 @@ li {
           animation: 3s ease-out forwards homeDoorImg;
 }
 .homeContainer .homeWrapper .textContainerRight {
-  font-family: "Dosis", sans-serif;
-  font-size: 24px;
-  color: #fc7643;
-  font-weight: 400;
-  width: 300px;
-  max-width: 350px;
   text-align: justify;
   word-break: break-word;
+  width: 300px;
+  max-width: 350px;
+  font-family: "Dosis", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fc7643;
   -webkit-animation: 4s ease-out forwards homeDoorTextRight;
           animation: 4s ease-out forwards homeDoorTextRight;
 }
 
-/* ---------- DESKTOP, LARGE SCREENS (min-width: 1025px / max-width: 1200px) ---------- */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .homeContainer .homeWrapper {
-    width: 80%;
+    width: 90%;
   }
 }
-/* ---------- SMALL SCREENS, LAPTOPS (min-width: 769px / max-width: 1024px) ---------- */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .homeContainer .homeWrapper {
-    width: 100%;
-    margin: 0 40px;
+    width: 90%;
   }
   .homeContainer .homeWrapper .img {
-    margin: 50px 10px 0 10px;
+    margin: 25px 25px 0 25px;
   }
 }
 @media screen and (min-width: 369px) and (max-width: 890px) {
   .homeContainer {
+    width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    width: 100%;
     padding-bottom: 50px;
   }
   .homeContainer .homeWrapper {
@@ -355,10 +452,16 @@ li {
             animation: none;
   }
 }
-/* ---------- MOBILE (max-width: 480px) ---------- */
 @media screen and (max-width: 480px) {
   .homeContainer {
     height: auto;
+  }
+  .homeContainer .homeTitle {
+    text-align: center;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin: 20px 0;
   }
   .homeContainer .homeWrapper {
     flex-direction: column;

@@ -5,7 +5,6 @@
 .contactContainer {
   @include globals.flexCenterXY;
   flex-direction: column;
-  //height: 700px;
   height: 100vh;
   background-color: globals.$color-1;
   color: globals.$color-5;
@@ -44,7 +43,7 @@
       max-width: 500px;
       margin-top: 50px;
       padding: 20px 30px;
-      font-size: globals.$font-size-3;
+      font-size: globals.$font-size-1;
       border: 2px solid;
       .emailText {
         color: globals.$color-5;
@@ -56,7 +55,7 @@
     .secretContainer {
       display: flex;
       justify-content: center;
-      font-size: globals.$font-size-3;
+      font-size: globals.$font-size-1;
       .secretText {
         margin-top: 40px;
         animation: scrollingDown 2s ease-in-out;
@@ -76,7 +75,7 @@
     .emailAndSecretContainer {
       width: 350px;
       .emailContainer {
-        font-size: globals.$font-size-1;
+        font-size: globals.$font-size-xs;
       }
       .secretContainer {
         .secretText {
@@ -98,9 +97,14 @@
       width: 270px;
       .emailContainer {
         font-size: globals.$font-size-xs;
+        .emailIcon {
+          margin: 5px 10px 0 0;
+        }
       }
-      .emailIcon {
-        margin: 5px 10px 0 0;
+      .secretContainer {
+        .secretText {
+          font-size: globals.$font-size-xs;
+        }
       }
     }
   }

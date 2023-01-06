@@ -39,18 +39,18 @@ const Skills = () => {
       </h2>
       <div className={skillsStyles.logosContainer} ref={logosRef}>
         <div className={`${skillsStyles.logosFrontend} ${logosIsVisible ? skillsStyles.logosFrontendAnimate : ""}`}>
-          <Skill src={logoHTML} alt={"logo de HTML"} />
-          <Skill src={logoCSS} alt={"logo de CSS"} />
-          <Skill src={logoSass} alt={"logo de Sass"} />
-          <Skill src={logoJS} alt={"logo de JavaScript"} />
-          <Skill src={logoReact} alt={"logo de React.js"} />
+          <Skill src={logoHTML} name={"HTML5"} alt={"logo de HTML"} />
+          <Skill src={logoCSS} name={"CSS3"} alt={"logo de CSS"} />
+          <Skill src={logoSass} name={"Sass"} alt={"logo de Sass"} />
+          <Skill src={logoJS} name={"JavaScript"} alt={"logo de JavaScript"} />
+          <Skill src={logoReact} name={"React.js"} alt={"logo de React.js"} />
         </div>
         <div className={`${skillsStyles.logosBackend} ${logosIsVisible ? skillsStyles.logosBackendAnimate : ""}`}>
-          <Skill src={logoGitHub} alt={"logo de GitHub"} className={skillsStyles.logoGitHub}/>
-          <Skill src={logoExpress} alt={"logo d'Express.js"} />
-          <Skill src={logoNode} alt={"logo de Node.js"} className={skillsStyles.logoNode}/>
-          <Skill src={logoMongo} alt={"logo de MongoDB"} />
-          <Skill src={logoPostman} alt={"logo de Postman"}/>
+          <Skill src={logoGitHub} name={"GitHub"} alt={"logo de GitHub"} className={skillsStyles.logoGitHub}/>
+          <Skill src={logoExpress} name={"Express.js"} alt={"logo d'Express.js"} />
+          <Skill src={logoNode} name={"Node.js"} alt={"logo de Node.js"} className={skillsStyles.logoNode}/>
+          <Skill src={logoMongo} name={"MongoDB"} alt={"logo de MongoDB"} />
+          <Skill src={logoPostman} name={"Postman"} alt={"logo de Postman"}/>
         </div>
       </div>
     </section>

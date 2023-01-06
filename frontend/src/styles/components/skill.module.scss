@@ -3,23 +3,46 @@
 // Desktop //
 
 .logoContainer {
-  @include globals.flexCenterXY;
-  flex-direction: column;
-  width: 120px;
-  margin: 40px 40px;
-  padding: 30px;
-  background-color: #ffebd2;
-  border-radius: 50%;
-  .img {
-    max-width: 50px;
+  position: relative;
+  .imgContainer {
+    @include globals.flexCenterXY;
+    width: 120px;
+    height: 120px;
+    margin: 40px 40px;
+    padding: 30px;
+    background-color: #ffebd2;
+    border-radius: 50%;
+    .img {
+      max-width: 50px;
+    }
+  }
+  .technoNameContainer {
+    @include globals.flexCenterXY;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    font-size: globals.$font-size-3;
+    color: globals.$color-5;
+    background-color: globals.$color-1;
+    border-radius: 50%;
+    opacity: 0;
+    &:hover {
+      opacity: 0.9;
+      transition: 0.5s;
+    }
   }
 }
 
-// Tablets, mobiles // 
+// Tablets, mobiles //
 
 @media screen and (max-width: 500px) {
   .logoContainer {
-    margin: 20px 20px;
+    .imgContainer {
+      margin: 20px 20px;
+    }
   }
 }
 
@@ -27,8 +50,10 @@
 
 @media screen and (max-width: 319px) {
   .logoContainer {
-    .img {
-      height: 50px;
+    .imgContainer {
+      .img {
+        height: 50px;
+      }
     }
   }
 }

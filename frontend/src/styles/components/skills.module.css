@@ -22,6 +22,60 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@-webkit-keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@-webkit-keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -190,6 +244,74 @@
     transform: translateX(0px);
   }
 }
+@-webkit-keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes scrollingDown {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+    z-index: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  55% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@-webkit-keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 *,
 ::before,
 ::after {
@@ -224,127 +346,38 @@ li {
   list-style-type: none;
 }
 
-@keyframes slide-in-left {
-  0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-    transform: translateX(-48px);
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-26px);
-  }
-  65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-13px);
-  }
-  82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-6.5px);
-  }
-  93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(-4px);
-  }
-  25%, 55%, 75%, 87%, 98% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    transform: translateX(0px);
-  }
-  100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 1;
-    transform: translateX(48px);
-  }
-  24% {
-    opacity: 1;
-  }
-  40% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(26px);
-  }
-  65% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(13px);
-  }
-  82% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(6.5px);
-  }
-  93% {
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    transform: translateX(4px);
-  }
-  25%, 55%, 75%, 87%, 98% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    transform: translateX(0px);
-  }
-  100% {
-    -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
 .skillsContainer {
-  width: 100%;
-  height: auto;
-  background-color: #ffa364;
-  color: #273248;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  width: 100%;
+  height: 100vh;
+  color: #273248;
+  background-color: #ffa364;
   overflow-x: hidden;
 }
 .skillsContainer .skillsTitle {
-  font-family: "Permanent Marker", sans-serif;
-  font-size: 35px;
   text-align: center;
-  padding-top: 70px;
-  padding-bottom: 30px;
+  font-family: "Permanent Marker", sans-serif;
+  font-size: 40px;
   letter-spacing: 3px;
+  padding: 70px 0 30px 0;
 }
 .skillsContainer .skillsAnimate {
   -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-expand 4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 .skillsContainer .logosContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
   padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
-.skillsContainer .logosContainer .logosFrontend {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+.skillsContainer .logosContainer .logosFrontend,
 .skillsContainer .logosContainer .logosBackend {
   display: flex;
   flex-direction: row;
@@ -360,15 +393,21 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
-  .skillsContainer .logosContainer .logosFrontend {
-    justify-content: center;
+  .skillsContainer {
+    height: auto;
   }
-  .skillsContainer .logosContainer .logosBackend {
+  .skillsContainer .logosFrontend, .skillsContainer .logosBackend {
     justify-content: center;
   }
 }
 @media screen and (max-width: 480px) {
+  .skillsContainer {
+    height: auto;
+  }
   .skillsContainer .skillsTitle {
-    font-size: 24px;
+    text-align: center;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
   }
 }/*# sourceMappingURL=skills.module.css.map */

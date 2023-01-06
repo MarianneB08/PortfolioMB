@@ -8,9 +8,9 @@
   width: 300px;
   max-width: 350px;
   font-family: globals.$font-family-1;
-  font-size: globals.$font-size-3;
+  font-size: globals.$font-size-2;
   font-weight: 400;
-  color: globals.$color-3; 
+  color: globals.$color-3;
 }
 
 // Desktop //
@@ -45,7 +45,7 @@
     }
     .img {
       height: 250px;
-      margin: 40px 20px 0 20px;
+      margin: 25px 20px 0 20px;
       box-shadow: rgba(0, 0, 0, 0.3) 0px 60px 40px -5px;
       filter: blur(6px);
     }
@@ -76,7 +76,7 @@
     .homeWrapper {
       width: 90%;
       .img {
-        margin: 50px 25px 0 25px;
+        margin: 25px 25px 0 25px;
       }
     }
   }

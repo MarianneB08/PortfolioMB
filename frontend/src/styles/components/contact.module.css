@@ -22,6 +22,60 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@keyframes homeDoorTextLeft {
+  100% {
+    transform: perspective(400px) rotateY(15deg);
+  }
+}
+@-webkit-keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@keyframes homeDoorTextRight {
+  100% {
+    transform: perspective(400px) rotateY(-15deg);
+  }
+}
+@-webkit-keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@keyframes homeDoorImg {
+  0% {
+    filter: blur(6px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px) translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px) translateX(-200px);
+    opacity: 1;
+  }
+}
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-animation-timing-function: ease-in;
@@ -190,40 +244,6 @@
     transform: translateX(0px);
   }
 }
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  width: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow-x: hidden;
-  font-family: "Dosis", sans-serif;
-  font-size: 18px;
-  background-color: #ffebd2;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #273248;
-}
-
-li {
-  list-style-type: none;
-}
-
 @-webkit-keyframes scrollingDown {
   0% {
     transform: translateY(-30px);
@@ -248,7 +268,6 @@ li {
     z-index: 1;
   }
 }
-
 @keyframes scrollingDown {
   0% {
     transform: translateY(-30px);
@@ -293,21 +312,56 @@ li {
     opacity: 1;
   }
 }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: hidden;
+  font-family: "Dosis", sans-serif;
+  font-size: 18px;
+  background-color: #ffebd2;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #273248;
+}
+
+li {
+  list-style-type: none;
+}
+
 .contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
   background-color: #273248;
   color: #ffebd2;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow-x: hidden;
 }
 .contactContainer .contactTitle {
+  text-align: center;
   font-family: "Permanent Marker", sans-serif;
-  font-size: 35px;
-  padding-bottom: 70px;
+  font-size: 40px;
   letter-spacing: 3px;
+  padding-bottom: 70px;
 }
 .contactContainer .contactAnimate {
   -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
@@ -326,8 +380,8 @@ li {
           animation: slide-in-right 3s ease 0s 1 normal forwards;
 }
 .contactContainer .curriculumContainer {
-  opacity: 0;
   font-size: 35px;
+  opacity: 0;
   -webkit-animation: apparition 1.5s ease 0.5s 1 normal forwards;
           animation: apparition 1.5s ease 0.5s 1 normal forwards;
 }
@@ -337,11 +391,11 @@ li {
 .contactContainer .emailAndSecretContainer .emailContainer {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
-  font-size: 24px;
-  border: 2px solid;
   max-width: 500px;
+  margin-top: 50px;
   padding: 20px 30px;
+  font-size: 18px;
+  border: 2px solid;
 }
 .contactContainer .emailAndSecretContainer .emailContainer .emailText {
   color: #ffebd2;
@@ -352,29 +406,24 @@ li {
 .contactContainer .emailAndSecretContainer .secretContainer {
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 .contactContainer .emailAndSecretContainer .secretContainer .secretText {
-  -webkit-animation: scrollingDown;
-          animation: scrollingDown;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  color: #ffebd2;
   margin-top: 40px;
+  -webkit-animation: scrollingDown 2s ease-in-out;
+          animation: scrollingDown 2s ease-in-out;
+  color: #ffebd2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 481px) {
   .contactContainer .curriculumContainer {
     font-size: 22px;
   }
   .contactContainer .emailAndSecretContainer {
     width: 350px;
   }
-  .contactContainer .emailAndSecretContainer .emailContainer .emailText {
-    font-size: 18px;
-  }
-  .contactContainer .emailAndSecretContainer .emailContainer .emailIcon {
-    font-size: 18px;
+  .contactContainer .emailAndSecretContainer .emailContainer {
+    font-size: 15px;
   }
   .contactContainer .emailAndSecretContainer .secretContainer .secretText {
     font-size: 15px;
@@ -382,16 +431,21 @@ li {
 }
 @media screen and (max-width: 480px) {
   .contactContainer .contactTitle {
-    font-size: 24px;
+    text-align: center;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 35px;
+    letter-spacing: 3px;
   }
   .contactContainer .emailAndSecretContainer {
     width: 270px;
   }
-  .contactContainer .emailAndSecretContainer .emailText {
+  .contactContainer .emailAndSecretContainer .emailContainer {
     font-size: 15px;
   }
-  .contactContainer .emailAndSecretContainer .emailIcon {
-    font-size: 15px;
+  .contactContainer .emailAndSecretContainer .emailContainer .emailIcon {
     margin: 5px 10px 0 0;
+  }
+  .contactContainer .emailAndSecretContainer .secretContainer .secretText {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=contact.module.css.map */
