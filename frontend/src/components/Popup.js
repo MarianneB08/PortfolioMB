@@ -98,7 +98,7 @@ const Popup = ({ trigger, setTrigger }) => {
             Tout utilisateur dispose d’un droit d’accès, de rectification et
             d’opposition aux données personnelles le concernant, en effectuant
             sa demande écrite et signée, accompagnée d’une preuve d’identité.
-            5678 Le site ne recueille pas d’informations personnelles, et n’est
+            Le site ne recueille pas d’informations personnelles, et n’est
             pas assujetti à déclaration à la CNIL.
           </p>
         </div>
