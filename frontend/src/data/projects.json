@@ -82,5 +82,17 @@
     },
     "site": "",
     "code": "https://github.com/MarianneB08/PortfolioMB"
+  },
+  {
+    "id": "8",
+    "title": "Compagnie Shafak",
+    "date": "Avril 2023",
+    "infos": "Site vitrine réalisé pour la Compagnie Shafak, compagnie de danse contemporaine fondée par Larbi Namouchi et Margot Libanga.Il a été développé avec React et Sass pour les styles, et est disponible en version française ainsi qu'en version anglaise.",
+    "img": {
+      "desktop": "./img/shafak_website.gif",
+      "mobile": "./img/shafak_website.gif"
+    },
+    "site": "https://shafak.fr",
+    "code": "https://github.com/MarianneB08/Shafak-Project"
   }
 ]
