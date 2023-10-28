@@ -14,6 +14,7 @@
   color: globals.$color-1;
   background-color: globals.$color-5;
   border: 2px solid globals.$color-1;
+  border-radius: 15px;
   opacity: 0.9;
   overflow-y: scroll;
   .popupTitle {
@@ -39,6 +40,7 @@
     background-color: globals.$color-5;
     color: globals.$color-1;
     border: 2px solid globals.$color-1;
+    border-radius: 8px;
     cursor: pointer;
   }
 }

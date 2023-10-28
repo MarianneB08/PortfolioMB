@@ -45,6 +45,7 @@
       padding: 20px 30px;
       font-size: globals.$font-size-1;
       border: 2px solid;
+      border-radius: 8px;
       .emailText {
         color: globals.$color-5;
       }
@@ -90,6 +91,7 @@
 
 @media screen and (max-width: 480px) {
   .contactContainer {
+    padding: 60px 0;
     .contactTitle {
       @include globals.sectionTitleMobile;
     }

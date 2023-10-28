@@ -26,9 +26,11 @@
     height: 270px;
     margin: 30px;
     box-shadow: rgba(39, 50, 72, 0.3) 0px 50px 30px -5px;
+    border-radius: 15px;
     .cardImgDesktop {
       @include imgConfiguration;
       object-position: top center;
+      border-radius: 15px;
     }
     .cardImgMobile {
       display: none;
@@ -42,6 +44,7 @@
       padding: 20px;
       z-index: 1;
       opacity: 0;
+      border-radius: 15px;
       .title {
         font-size: globals.$font-size-1;
       }
@@ -63,6 +66,7 @@
           height: 30px;
           font-size: globals.$font-size-xs;
           border: 1.5px solid globals.$color-5;
+          border-radius: 8px;
           transition: transform 300ms;
           &:hover {
             transform: scale(1.1);
@@ -148,6 +152,7 @@
     .card {
       height: 380px;
       margin: 50px 0;
+      border-radius: 15px;
       .cardImgDesktop {
         display: none;
       }
@@ -155,10 +160,12 @@
         @include imgConfiguration;
         display: block;
         object-position: center center;
+        border-radius: 15px;
       }
       .infos {
         height: 100%;
         padding: 15px;
+        border-radius: 15px;
         .title {
           margin-bottom: 5px;
         }
