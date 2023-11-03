@@ -94,5 +94,17 @@
     },
     "site": "https://shafak.fr",
     "code": "https://github.com/MarianneB08/Shafak-Project"
+  },
+  {
+    "id": "9",
+    "title": "Correction, relecture & rédaction",
+    "date": "Novembre 2023",
+    "infos": "Site vitrine réalisé pour mettre en avant mes autres activités : la correction-relecture et la rédaction. Il a été développé avec React, Sass pour les styles, c'est un peu le petit frère du site que vous parcourez actuellement !",
+    "img": {
+      "desktop": "./img/correction.png",
+      "mobile": "./img/correction_mobile.png"
+    },
+    "site": "https://mboyer-correction.com",
+    "code": "https://github.com/MarianneB08/Proofreading"
   }
 ]
